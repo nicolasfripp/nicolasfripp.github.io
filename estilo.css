@@ -284,6 +284,19 @@ section h2 {
   left: 0;
 }
 
+.detail-section ol {
+  padding-left: 20px;
+  color: var(--color-text);
+}
+
+.detail-section ol li {
+  padding: 6px 0;
+}
+
+.detail-section ol li::marker {
+  color: var(--color-accent);
+}
+
 /* Footer */
 footer {
   text-align: center;
