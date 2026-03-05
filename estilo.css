@@ -1,24 +1,350 @@
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  text-align: left;
-  border: none;
-  outline: none;
-  transition: 0.4s;
+/* ===========================================
+   Nicolas Fripp Rodriguez - Portfolio Styles
+   =========================================== */
+
+/* Custom Properties */
+:root {
+  --color-bg: #0f172a;
+  --color-card: #1e293b;
+  --color-accent: #38bdf8;
+  --color-accent-dark: #0ea5e9;
+  --color-text: #e2e8f0;
+  --color-text-muted: #94a3b8;
+  --color-border: #334155;
+  --font-family: 'Inter', sans-serif;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #ccc;
+/* Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #164e63 100%);
+  text-align: center;
+  padding: 60px 24px;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+header p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  font-weight: 300;
+}
+
+header p + p {
+  margin-top: 4px;
+}
+
+/* Main Content */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+section {
+  margin-bottom: 56px;
+}
+
+section h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #ffffff;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 8px;
+  display: inline-block;
+}
+
+/* Profile / About Section */
+.profile-container {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-bg);
+}
+
+.bio p {
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  margin-top: 16px;
+}
+
+.project-card {
+  background-color: var(--color-card);
+  border-radius: 10px;
+  padding: 28px;
+  border-left: 4px solid var(--color-accent);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+}
+
+.project-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* Technology Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  display: inline-block;
+  background-color: rgba(56, 189, 248, 0.12);
+  color: var(--color-accent);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--color-accent-dark);
+  color: var(--color-bg);
+  transform: translateY(-1px);
+}
+
+/* Links Section */
+.links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-card);
+  padding: 18px 24px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.link-icon {
+  font-size: 1.5rem;
+  min-width: 32px;
+  text-align: center;
+}
+
+.link-item a {
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.link-item span.link-note {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Project Detail Page Styles */
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.detail-section {
+  background-color: var(--color-card);
+  border-radius: 10px;
+  padding: 28px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.detail-section h2 {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.detail-section p {
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.detail-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.detail-section ul li {
+  padding: 6px 0;
+  padding-left: 20px;
+  position: relative;
+  color: var(--color-text);
+}
+
+.detail-section ul li::before {
+  content: "\25B8";
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 32px 24px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--color-text-muted);
+}
+
+footer a:hover {
+  color: var(--color-accent);
+}
+
+/* Responsive: Mobile < 768px */
+@media (max-width: 768px) {
+  header {
+    padding: 40px 16px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 32px 16px;
+  }
+
+  section h2 {
+    font-size: 1.4rem;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    font-size: 2rem;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.15rem;
+  }
+
+  .link-item {
+    padding: 14px 18px;
+  }
 }

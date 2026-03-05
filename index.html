@@ -1,52 +1,96 @@
 <!DOCTYPE html>
-<html>
- <head>
-    <link rel="stylesheet" href="estilo.css">
- </head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--
-  The above 2 meta tags *must* come first in the <head>
-  to consistently ensure proper document rendering.
-  Any other head element should come *after* these tags.
- -->
-<title>Page Title</title>
-
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nicolas Fripp Rodriguez - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
 <body>
-    <button class="accordion">Section 1</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div>
-    
-    <button class="accordion">Section 2</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div>
-    
-    <button class="accordion">Section 3</button>
-    <div class="panel">
-      <p>Lorem ipsum...</p>
-    </div> 
+
+  <header>
+    <h1>Nicolas Fripp Rodriguez</h1>
+    <p>Especializacion en Ciencia de Datos e Inteligencia Artificial</p>
+    <p>Universidad Tecnologica del Uruguay (UTEC) | MIT</p>
+  </header>
+
+  <main>
+
+    <section id="about">
+      <h2>Sobre Mi</h2>
+      <div class="profile-container">
+        <div class="profile-photo">NF</div>
+        <div class="bio">
+          <p>Soy Nicolas Fripp Rodriguez, egresado de la Especializacion en Ciencia de Datos e Inteligencia Artificial dictada por la Universidad Tecnologica del Uruguay (UTEC), en colaboracion con el Massachusetts Institute of Technology (MIT). Soy Ingeniero en Computacion egresado de la Universidad de la Republica (UDELAR) y me desempeno profesionalmente como desarrollador fullstack en la industria del software.</p>
+          <p>Mi formacion se centro en el desarrollo y la aplicacion de tecnicas avanzadas de analisis de datos, aprendizaje automatico e inteligencia artificial, con un enfoque fuertemente practico y orientado a la resolucion de problemas reales en distintos dominios.</p>
+          <p>Este sitio web, vinculado a mi repositorio en GitHub, tiene como objetivo difundir y poner a disposicion los principales proyectos que desarrolle durante la especializacion, los cuales representan los aprendizajes, competencias y desafios mas significativos de mi recorrido academico.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Proyectos Destacados</h2>
+      <p>Se presentan algunos de los proyectos mas relevantes desarrollados en el marco de la especializacion:</p>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <h3>Car Chatbot - Busqueda Semantica de Vehiculos</h3>
+          <p>Aplicacion full-stack basada en RAG (Retrieval Augmented Generation) que permite buscar entre 38,531 vehiculos mediante consultas en lenguaje natural, con memoria conversacional y documentacion de fuentes.</p>
+          <div class="tags">
+            <span class="tag">FastAPI</span>
+            <span class="tag">React</span>
+            <span class="tag">FAISS</span>
+            <span class="tag">OpenAI GPT-4o-mini</span>
+            <span class="tag">LangChain</span>
+            <span class="tag">Python</span>
+            <span class="tag">RAG</span>
+          </div>
+          <a class="btn" href="car-chatbot.html">Ver Proyecto &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <h3>Futbol Predictor - Prediccion de Resultados La Liga</h3>
+          <p>Sistema de machine learning para predecir resultados de partidos de La Liga espanola, utilizando modelos ensemble optimizados y 10 temporadas de datos historicos.</p>
+          <div class="tags">
+            <span class="tag">XGBoost</span>
+            <span class="tag">LightGBM</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">Optuna</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">scikit-learn</span>
+            <span class="tag">Python</span>
+          </div>
+          <a class="btn" href="futbol-predictor.html">Ver Proyecto &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Enlaces Profesionales</h2>
+      <div class="links-list">
+        <div class="link-item">
+          <span class="link-icon">in</span>
+          <a href="https://uy.linkedin.com/in/nicol%C3%A1s-fripp-rodr%C3%ADguez-82526420a" target="_blank">LinkedIn</a>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">CV</span>
+          <a href="#">CVUy</a>
+          <span class="link-note">(proximamente)</span>
+        </div>
+        <div class="link-item">
+          <span class="link-icon">GH</span>
+          <a href="https://github.com/nicolasfripp" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Especializacion en Ciencia de Datos e Inteligencia Artificial &mdash; UTEC | MIT &mdash; 2026</p>
+  </footer>
+
 </body>
-<script>
-
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
-
-    /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-} 
-</script>
 </html>
