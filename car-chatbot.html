@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Car Chatbot - Nicolas Fripp Rodriguez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-link" href="index.html">&larr; Volver al Portafolio</a>
+    <h1>Car Chatbot</h1>
+    <p>Búsqueda Semántica de Vehículos mediante Lenguaje Natural</p>
+  </header>
+
+  <main>
+
+    <section class="detail-section">
+      <h2>Objetivo del Proyecto</h2>
+      <p>Desarrollar una aplicación conversacional que permita a usuarios buscar vehículos mediante lenguaje natural, superando las limitaciones de los filtros tradicionales de búsqueda. El sistema debía ser capaz de interpretar consultas complejas como "necesito un SUV rojo por menos de $10,000" y devolver resultados relevantes con documentación de fuentes.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Problema Abordado</h2>
+      <p>Los sistemas tradicionales de búsqueda de vehículos requieren que el usuario conozca y utilice filtros exactos (marca, modelo, año, precio). Esto limita la experiencia cuando el usuario tiene una idea general de lo que busca pero no conoce los parámetros específicos. Este proyecto resuelve el problema permitiendo búsquedas en lenguaje natural sobre un dataset de 38,531 vehículos con 30 atributos cada uno.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Decisiones Técnicas</h2>
+      <ul>
+        <li>Se eligió RAG (Retrieval Augmented Generation) sobre filtrado tradicional para permitir consultas semánticas flexibles</li>
+        <li>FAISS (Facebook AI Similarity Search) para indexación eficiente de 38,531 embeddings vectoriales</li>
+        <li>GPT-4o-mini como modelo de lenguaje por su balance costo/rendimiento (~$0.0001 USD por consulta)</li>
+        <li>Implementación de un SummaryBufferMemory custom que mantiene los últimos 1,000 tokens verbatim y resume automáticamente el historial anterior</li>
+        <li>Arquitectura desacoplada: backend FastAPI + frontend React comunicados via REST API</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Tecnologías y Metodologías</h2>
+
+      <h3>Backend</h3>
+      <div class="tags">
+        <span class="tag">FastAPI</span>
+        <span class="tag">Python 3.11+</span>
+        <span class="tag">LangChain</span>
+        <span class="tag">FAISS</span>
+        <span class="tag">OpenAI API</span>
+      </div>
+
+      <h3>Frontend</h3>
+      <div class="tags">
+        <span class="tag">React 19</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Axios</span>
+        <span class="tag">CSS3</span>
+      </div>
+
+      <h3>Metodología</h3>
+      <div class="tags">
+        <span class="tag">RAG Pipeline</span>
+        <span class="tag">Embeddings Semánticos</span>
+        <span class="tag">Memoria Conversacional</span>
+      </div>
+
+      <h3>Datos</h3>
+      <p>Dataset de 38,531 vehículos con 30 atributos (marca, modelo, año, precio, color, tipo de carrocería, combustible, etc.)</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Arquitectura del Sistema</h2>
+      <ol>
+        <li>El usuario envía una consulta en lenguaje natural</li>
+        <li>La consulta se convierte en un vector de embeddings usando text-embedding-3-small de OpenAI</li>
+        <li>FAISS busca los 5 vehículos más similares semánticamente en el índice vectorial</li>
+        <li>Los datos de los vehículos recuperados se formatean como contexto</li>
+        <li>GPT-4o-mini genera una respuesta en lenguaje natural usando el contexto + historial de conversación</li>
+        <li>El SummaryBufferMemory actualiza el historial, comprimiendo mensajes antiguos automáticamente</li>
+      </ol>
+    </section>
+
+    <section class="detail-section">
+      <h2>Resultados Obtenidos</h2>
+      <ul>
+        <li>Tiempo de respuesta: 1-2 segundos por consulta</li>
+        <li>Costo por consulta: ~$0.0001 USD (altamente económico)</li>
+        <li>Soporte bilingüe: consultas en español e inglés</li>
+        <li>Interfaz responsive con indicador de typing en tiempo real y cards de fuentes expandibles</li>
+        <li>Capacidad de manejar preguntas de seguimiento con contexto ("¿Cuál es el más barato de los que me mostraste?")</li>
+        <li>Documentación completa de fuentes: cada respuesta puede mostrar los vehículos utilizados como referencia</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Especializacion en Ciencia de Datos e Inteligencia Artificial &mdash; UTEC | MIT &mdash; 2026</p>
+  </footer>
+
+</body>
+</html>

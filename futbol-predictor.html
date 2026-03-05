@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Futbol Predictor - Nicolas Fripp Rodriguez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-link" href="index.html">&larr; Volver al Portafolio</a>
+    <h1>Futbol Predictor</h1>
+    <p>Predicci&oacute;n de Resultados de La Liga Espa&ntilde;ola mediante Machine Learning</p>
+  </header>
+
+  <main>
+
+    <section class="detail-section">
+      <h2>Objetivo del Proyecto</h2>
+      <p>Construir un sistema de machine learning capaz de predecir resultados de partidos de La Liga espa&ntilde;ola, generando probabilidades para tres posibles desenlaces: victoria local (H), empate (D) y victoria visitante (A). El sistema implementa dos escenarios de predicci&oacute;n: pre-partido y en vivo (medio tiempo).</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Problema Abordado</h2>
+      <p>La predicci&oacute;n de resultados deportivos es un problema de clasificaci&oacute;n multiclase con alta incertidumbre inherente. Los partidos de f&uacute;tbol est&aacute;n influenciados por m&uacute;ltiples factores dif&iacute;ciles de cuantificar. Este proyecto aborda el desaf&iacute;o combinando estad&iacute;sticas hist&oacute;ricas de 10 temporadas (2016-2025), datos de mercado de Transfermarkt y cuotas de 5 casas de apuestas para construir modelos predictivos robustos.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Decisiones T&eacute;cnicas</h2>
+      <ul>
+        <li>Split temporal (temporadas 2016-2023 para entrenamiento, 2024-2025 para test) en lugar de aleatorio, respetando la naturaleza secuencial de los datos deportivos</li>
+        <li>Ventanas m&oacute;viles de 5 partidos para calcular estad&iacute;sticas rolling (goles, tiros, corners, tarjetas, puntos)</li>
+        <li>Class weights para manejar el desbalance de clases (los empates son menos frecuentes)</li>
+        <li>Optimizaci&oacute;n de hiperpar&aacute;metros con Optuna: 50 trials con TPE sampler y 3-fold cross-validation</li>
+        <li>Modelado dual: escenario pre-partido (41 features) y escenario in-play con features adicionales de medio tiempo</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Tecnolog&iacute;as y Metodolog&iacute;as</h2>
+
+      <h3>Machine Learning</h3>
+      <div class="tags">
+        <span class="tag">XGBoost</span>
+        <span class="tag">LightGBM</span>
+        <span class="tag">Random Forest</span>
+        <span class="tag">Optuna</span>
+        <span class="tag">scikit-learn</span>
+      </div>
+
+      <h3>Procesamiento de Datos</h3>
+      <div class="tags">
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">StandardScaler</span>
+        <span class="tag">LabelEncoder</span>
+      </div>
+
+      <h3>Visualizaci&oacute;n</h3>
+      <div class="tags">
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
+        <span class="tag">Plotly</span>
+      </div>
+
+      <h3>Feature Engineering</h3>
+      <p>41 features pre-match incluyendo rolling stats, valores de mercado, cuotas de apuestas y ratios de eficiencia. Features adicionales in-play: goles al medio tiempo, diferencia de tarjetas.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Fuentes de Datos</h2>
+      <ul>
+        <li>Estad&iacute;sticas de partidos: 10 temporadas de La Liga (2016-2025)</li>
+        <li>Datos de Transfermarkt: valores de mercado de los equipos</li>
+        <li>Cuotas de 5 casas de apuestas: Bet365, Betwin, Pinnacle, William Hill y VCBet</li>
+        <li>Variables derivadas: probabilidades impl&iacute;citas normalizadas, ratios de valor de mercado, diferencias de forma</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Resultados Obtenidos</h2>
+      <ul>
+        <li>6 modelos entrenados: 3 algoritmos (Random Forest, XGBoost, LightGBM) &times; 2 escenarios (pre-partido e in-play)</li>
+        <li>M&eacute;tricas de evaluaci&oacute;n: Accuracy, Log Loss, F1-Weighted y F1-Macro</li>
+        <li>Los modelos in-play mejoran significativamente la accuracy al incorporar datos de medio tiempo</li>
+        <li>An&aacute;lisis completo de importancia de features para cada modelo</li>
+        <li>Matrices de confusi&oacute;n y reportes de clasificaci&oacute;n detallados</li>
+        <li>Comparaci&oacute;n visual exhaustiva entre modelos y escenarios</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Especializacion en Ciencia de Datos e Inteligencia Artificial &mdash; UTEC | MIT &mdash; 2026</p>
+  </footer>
+
+</body>
+</html>
