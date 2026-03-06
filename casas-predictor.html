@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Predicci&oacute;n de Precios de Casas - Nicolas Fripp Rodriguez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header>
+    <a class="back-link" href="index.html">&larr; Volver al Portafolio</a>
+    <h1>Predicci&oacute;n de Precios de Casas en Uruguay</h1>
+    <p>Modelo de Machine Learning para Estimar Valores Inmobiliarios</p>
+  </header>
+
+  <main>
+
+    <section class="detail-section">
+      <h2>Objetivo del Proyecto</h2>
+      <p>Desarrollar un modelo predictivo capaz de estimar el precio de venta de casas en Uruguay a partir de sus caracter&iacute;sticas. El modelo busca servir como herramienta de referencia para vendedores que necesitan fijar un precio, para compradores que quieren detectar oportunidades, y para analizar qu&eacute; variables son las m&aacute;s determinantes en el valor de una propiedad.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Problema Abordado</h2>
+      <p>El mercado inmobiliario uruguayo carece de herramientas accesibles para estimar precios de propiedades de forma objetiva. Se parti&oacute; de una base de datos de m&aacute;s de 177,000 publicaciones de casas en venta extra&iacute;das mediante web scraping de Mercado Libre y El Gallito, abarcando el per&iacute;odo 2023-2025. El desaf&iacute;o principal radic&oacute; en la calidad de los datos: duplicados, valores faltantes, errores de carga por parte de los usuarios (monedas incorrectas, valores ficticios como "1111111"), y la necesidad de unificar dos fuentes de datos con estructuras diferentes.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Decisiones T&eacute;cnicas</h2>
+      <ul>
+        <li>Se unificaron dos fuentes de datos (Mercado Libre y El Gallito) con variables equivalentes pero en columnas distintas, mergeando NEIGHBORHOOD/ADDRESS_CITY_NAME, CONDITION/ITEM_CONDITION y las fechas de proceso</li>
+        <li>Se imputaron departamentos faltantes mediante mapeo por moda de barrio y prompt engineering con IA para los casos restantes, logrando pasar de 94% nulos a 0%</li>
+        <li>Se mantuvieron dos datasets paralelos: uno con agrupaci&oacute;n de categor&iacute;as para regresi&oacute;n lineal y otro preservando todas las categor&iacute;as para CatBoost</li>
+        <li>Se eligi&oacute; CatBoost como modelo principal dado que 6 de las 10 variables explicativas son categ&oacute;ricas, aprovechando su manejo nativo de este tipo de datos</li>
+        <li>Se entrenaron modelos segmentados por departamento (Montevideo, Maldonado, Canelones) para capturar din&aacute;micas locales del mercado</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2>Tecnolog&iacute;as y Metodolog&iacute;as</h2>
+
+      <h3>Machine Learning</h3>
+      <div class="tags">
+        <span class="tag">CatBoost</span>
+        <span class="tag">Regresi&oacute;n Lineal (OLS)</span>
+        <span class="tag">Optuna</span>
+        <span class="tag">scikit-learn</span>
+      </div>
+
+      <h3>Procesamiento de Datos</h3>
+      <div class="tags">
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">Statsmodels</span>
+      </div>
+
+      <h3>Visualizaci&oacute;n</h3>
+      <div class="tags">
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
+      </div>
+
+      <h3>Datos</h3>
+      <p>+177,000 publicaciones de casas en venta en Uruguay (Mercado Libre y El Gallito), reducidas a ~37,000 observaciones tras limpieza. Variables finales: barrio, departamento, &aacute;rea cubierta, ba&ntilde;os, dormitorios, garajes, condici&oacute;n, aire acondicionado, tour virtual, tipo de publicaci&oacute;n y origen.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2>Pipeline de Datos</h2>
+      <ol>
+        <li>Carga y unificaci&oacute;n de dos fuentes de datos con variables equivalentes en columnas distintas</li>
+        <li>Eliminaci&oacute;n de variables irrelevantes (descripci&oacute;n, t&iacute;tulo, IDs, direcci&oacute;n, posici&oacute;n, a&ntilde;o de construcci&oacute;n)</li>
+        <li>Imputaci&oacute;n de datos faltantes: departamentos por moda de barrio + IA, condici&oacute;n reclasificada en 4 categor&iacute;as (nuevo, usado, en construcci&oacute;n, sin especificar)</li>
+        <li>Conversi&oacute;n de precios a USD usando tasas de cambio mensuales y eliminaci&oacute;n de registros con errores de moneda</li>
+        <li>Limpieza de outliers: remoci&oacute;n de valores ficticios ("1111111"), precios menores a USD 1,000, y outliers por IQR</li>
+        <li>Eliminaci&oacute;n de duplicados y an&aacute;lisis exploratorio con visualizaciones univariadas y bivariadas</li>
+        <li>Entrenamiento de modelos: Regresi&oacute;n Lineal (con transformaciones logar&iacute;tmicas) y CatBoost (con optimizaci&oacute;n Optuna)</li>
+      </ol>
+    </section>
+
+    <section class="detail-section">
+      <h2>Resultados Obtenidos</h2>
+      <ul>
+        <li>Regresi&oacute;n Lineal: MAPE de 39.9% &mdash; modelo base con limitaciones por la naturaleza categ&oacute;rica de los datos</li>
+        <li>CatBoost: MAPE de 33.8% &mdash; mejora significativa gracias al manejo nativo de variables categ&oacute;ricas</li>
+        <li>CatBoost + Optuna: MAPE de 32.0% &mdash; optimizaci&oacute;n de hiperpar&aacute;metros con validaci&oacute;n cruzada (K-Fold, 5 splits)</li>
+        <li>CatBoost + Optuna (Montevideo): MAPE de 25.0% &mdash; mejor resultado, equivalente a un error t&iacute;pico de &plusmn; USD 50,000 sobre un precio promedio de USD 200,000</li>
+        <li>CatBoost + Optuna (Maldonado): MAPE de 37.0%</li>
+        <li>La segmentaci&oacute;n geogr&aacute;fica demostr&oacute; que los modelos locales capturan mejor las din&aacute;micas de cada mercado</li>
+        <li>El modelo final constituye una herramienta confiable para estimar valores inmobiliarios en el mercado uruguayo</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Especializaci&oacute;n en Ciencia de Datos e Inteligencia Artificial &mdash; UTEC | MIT &mdash; 2026</p>
+  </footer>
+
+</body>
+</html>
