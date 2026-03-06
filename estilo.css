@@ -143,16 +143,11 @@ section h2 {
   display: inline-block;
 }
 
-#about h2 {
-  display: block;
-  text-align: center;
-}
-
 /* Profile / About Section */
 .profile-container {
   display: flex;
   gap: 32px;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .profile-photo {
