@@ -39,7 +39,7 @@
       <p>Se presentan algunos de los proyectos más relevantes desarrollados en el marco de la especialización:</p>
       <div class="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='casas-predictor.html'" role="link" tabindex="0">
           <h3>Predicción de Precios de Casas en Uruguay</h3>
           <p>Modelo predictivo para estimar el valor de casas en Uruguay a partir de +177,000 publicaciones de Mercado Libre y El Gallito, con limpieza exhaustiva de datos y modelos segmentados por departamento.</p>
           <div class="tags">
@@ -53,7 +53,7 @@
           <a class="btn" href="casas-predictor.html">Ver Proyecto &rarr;</a>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='futbol-predictor.html'" role="link" tabindex="0">
           <h3>Fútbol Predictor - Predicción de Resultados La Liga</h3>
           <p>Sistema de machine learning para predecir resultados de partidos de La Liga española, utilizando modelos ensemble optimizados y 10 temporadas de datos históricos.</p>
           <div class="tags">
@@ -68,7 +68,7 @@
           <a class="btn" href="futbol-predictor.html">Ver Proyecto &rarr;</a>
         </div>
 
-        <div class="project-card">
+        <div class="project-card" onclick="location.href='car-chatbot.html'" role="link" tabindex="0">
           <h3>Car Chatbot - Búsqueda Semántica de Vehículos</h3>
           <p>Aplicación full-stack basada en RAG (Retrieval Augmented Generation) que permite buscar entre 38,531 vehículos mediante consultas en lenguaje natural, con memoria conversacional y documentación de fuentes.</p>
           <div class="tags">
@@ -90,7 +90,7 @@
       <h2>Tesis de Grado - Ingeniería en Computación</h2>
       <div class="projects-grid">
 
-        <div class="project-card">
+        <div class="project-card" onclick="window.open('https://hdl.handle.net/20.500.12008/42432','_blank')" role="link" tabindex="0">
           <h3>Sistema de Inspección de Estructuras Civiles Utilizando Drones Autónomos</h3>
           <p>Sistema basado en una flota de drones autónomos para realizar inspecciones edilicias en la Facultad de Ingeniería (UDELAR), mitigando riesgos de seguridad y reduciendo tiempos respecto al proceso manual. Se implementaron algoritmos de A* y Multiple Traveling Salesman Problem (MTSP) para optimizar rutas y asignación de drones.</p>
           <div class="tags">
@@ -110,8 +110,15 @@
   </main>
 
   <footer>
-    <p>Especializaci&oacute;n en Ciencia de Datos e Inteligencia Artificial &mdash; UTEC | MIT &mdash; 2026</p>
+    <p>Nicolás Fripp Rodríguez &mdash; 2026</p>
   </footer>
 
+  <script>
+    document.querySelectorAll('.project-card[role="link"]').forEach(function(card) {
+      card.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') card.click();
+      });
+    });
+  </script>
 </body>
 </html>

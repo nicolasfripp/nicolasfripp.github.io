@@ -124,7 +124,7 @@ header p + p {
 
 /* Main Content */
 main {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 48px 24px;
 }
@@ -171,7 +171,7 @@ section h2 {
 /* Projects Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-top: 16px;
 }
@@ -182,12 +182,16 @@ section h2 {
   padding: 28px;
   border-left: 4px solid var(--color-accent);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  border-left-color: var(--color-accent-dark);
 }
 
 .project-card h3 {
@@ -198,9 +202,13 @@ section h2 {
 }
 
 .project-card p {
-  color: var(--color-text-muted);
+  color: #b0bec5;
   margin-bottom: 16px;
   line-height: 1.6;
+}
+
+.project-card .tags {
+  margin-top: auto;
 }
 
 /* Technology Tags */
@@ -225,6 +233,7 @@ section h2 {
 /* Button */
 .btn {
   display: inline-block;
+  align-self: flex-start;
   background-color: var(--color-accent);
   color: var(--color-bg);
   padding: 10px 24px;
@@ -355,6 +364,28 @@ footer a:hover {
   color: var(--color-accent);
 }
 
+/* Focus States (Accessibility) */
+a:focus-visible,
+.btn:focus-visible,
+.project-card:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 /* Responsive: Mobile < 768px */
 @media (max-width: 768px) {
   header {
@@ -388,6 +419,10 @@ footer a:hover {
     height: 100px;
     min-width: 100px;
     font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
   }
 
   .project-card {
