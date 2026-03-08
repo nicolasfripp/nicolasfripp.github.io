@@ -40,47 +40,209 @@
       <div class="projects-grid">
 
         <div class="project-card reveal" style="--card-index:0" onclick="location.href='casas-predictor.html'" role="link" tabindex="0">
-          <h3>Predicción de Precios de Casas en Uruguay</h3>
-          <p>Modelo predictivo para estimar el valor de casas en Uruguay a partir de +177,000 publicaciones de Mercado Libre y El Gallito, con limpieza exhaustiva de datos y modelos segmentados por departamento.</p>
-          <div class="tags">
-            <span class="tag">CatBoost</span>
-            <span class="tag">Optuna</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">scikit-learn</span>
-            <span class="tag">Statsmodels</span>
-            <span class="tag">Python</span>
+          <div class="project-card-image">
+            <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-casas" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0f172a"/>
+                  <stop offset="100%" style="stop-color:#164e63"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#grad-casas)"/>
+              <!-- House -->
+              <polygon points="200,30 145,70 255,70" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+              <rect x="155" y="70" width="90" height="55" fill="none" stroke="#38bdf8" stroke-width="2"/>
+              <rect x="185" y="95" width="20" height="30" fill="rgba(56,189,248,0.15)" stroke="#38bdf8" stroke-width="1.5"/>
+              <rect x="162" y="78" width="16" height="14" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="1"/>
+              <rect x="212" y="78" width="16" height="14" fill="rgba(56,189,248,0.1)" stroke="#38bdf8" stroke-width="1"/>
+              <!-- Chart line -->
+              <polyline points="60,130 100,115 140,120 180,95 220,100 260,80 300,65 340,50" fill="none" stroke="#0ea5e9" stroke-width="2" stroke-dasharray="4,3" opacity="0.6"/>
+              <circle cx="300" cy="65" r="3" fill="#38bdf8" opacity="0.8"/>
+              <circle cx="340" cy="50" r="3" fill="#38bdf8" opacity="0.8"/>
+              <!-- Dollar sign -->
+              <text x="340" y="42" font-family="Inter,sans-serif" font-size="14" fill="#38bdf8" opacity="0.5" text-anchor="middle">$</text>
+            </svg>
           </div>
-          <a class="btn" href="casas-predictor.html">Ver Proyecto &rarr;</a>
+          <div class="project-card-content">
+            <h3>Predicción de Precios de Casas en Uruguay</h3>
+            <p>Modelo predictivo para estimar el valor de casas en Uruguay a partir de +177,000 publicaciones de Mercado Libre y El Gallito, con limpieza exhaustiva de datos y modelos segmentados por departamento.</p>
+            <div class="tags">
+              <span class="tag">CatBoost</span>
+              <span class="tag">Optuna</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">Statsmodels</span>
+              <span class="tag">Python</span>
+            </div>
+            <a class="btn" href="casas-predictor.html">Ver Proyecto &rarr;</a>
+          </div>
         </div>
 
         <div class="project-card reveal" style="--card-index:1" onclick="location.href='futbol-predictor.html'" role="link" tabindex="0">
-          <h3>Fútbol Predictor - Predicción de Resultados La Liga</h3>
-          <p>Sistema de machine learning para predecir resultados de partidos de La Liga española, utilizando modelos ensemble optimizados y 10 temporadas de datos históricos.</p>
-          <div class="tags">
-            <span class="tag">XGBoost</span>
-            <span class="tag">LightGBM</span>
-            <span class="tag">Random Forest</span>
-            <span class="tag">Optuna</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">scikit-learn</span>
-            <span class="tag">Python</span>
+          <div class="project-card-image">
+            <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-futbol" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0f172a"/>
+                  <stop offset="100%" style="stop-color:#1e3a5f"/>
+                </linearGradient>
+                <radialGradient id="ball-glow" cx="50%" cy="40%" r="50%">
+                  <stop offset="0%" style="stop-color:rgba(56,189,248,0.15)"/>
+                  <stop offset="100%" style="stop-color:rgba(56,189,248,0)"/>
+                </radialGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#grad-futbol)"/>
+              <!-- Football pitch lines -->
+              <rect x="55" y="25" width="130" height="110" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.15"/>
+              <line x1="120" y1="25" x2="120" y2="135" stroke="#38bdf8" stroke-width="0.8" opacity="0.12"/>
+              <circle cx="120" cy="80" r="18" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.12"/>
+              <circle cx="120" cy="80" r="2" fill="#38bdf8" opacity="0.15"/>
+              <!-- Penalty area -->
+              <rect x="55" y="50" width="30" height="60" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.12"/>
+              <rect x="155" y="50" width="30" height="60" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.12"/>
+              <!-- Soccer ball - detailed -->
+              <circle cx="275" cy="65" r="36" fill="url(#ball-glow)" stroke="#38bdf8" stroke-width="2"/>
+              <!-- Pentagon panels (black patches of a soccer ball) -->
+              <polygon points="275,29 286,40 282,53 268,53 264,40" fill="rgba(56,189,248,0.18)" stroke="#38bdf8" stroke-width="1.3"/>
+              <polygon points="268,53 282,53 288,67 275,76 262,67" fill="rgba(56,189,248,0.18)" stroke="#38bdf8" stroke-width="1.3"/>
+              <polygon points="275,76 288,67 302,73 300,88 284,88" fill="rgba(56,189,248,0.12)" stroke="#38bdf8" stroke-width="1"/>
+              <polygon points="275,76 262,67 248,73 250,88 266,88" fill="rgba(56,189,248,0.12)" stroke="#38bdf8" stroke-width="1"/>
+              <polygon points="275,76 284,88 275,101 266,88" fill="rgba(56,189,248,0.18)" stroke="#38bdf8" stroke-width="1.3"/>
+              <!-- Hex connecting lines -->
+              <line x1="286" y1="40" x2="300" y2="44" stroke="#38bdf8" stroke-width="0.8" opacity="0.35"/>
+              <line x1="264" y1="40" x2="250" y2="44" stroke="#38bdf8" stroke-width="0.8" opacity="0.35"/>
+              <line x1="302" y1="73" x2="311" y2="65" stroke="#38bdf8" stroke-width="0.8" opacity="0.25"/>
+              <line x1="248" y1="73" x2="239" y2="65" stroke="#38bdf8" stroke-width="0.8" opacity="0.25"/>
+              <line x1="300" y1="88" x2="305" y2="96" stroke="#38bdf8" stroke-width="0.8" opacity="0.25"/>
+              <line x1="250" y1="88" x2="245" y2="96" stroke="#38bdf8" stroke-width="0.8" opacity="0.25"/>
+              <!-- Prediction chart -->
+              <text x="310" y="20" font-family="Inter,sans-serif" font-size="9" fill="#38bdf8" opacity="0.4" font-weight="500">PRED</text>
+              <polyline points="310,115 320,108 330,112 340,98 350,102 360,88 370,75 380,68" fill="none" stroke="#0ea5e9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+              <circle cx="370" cy="75" r="2.5" fill="#38bdf8" opacity="0.8"/>
+              <circle cx="380" cy="68" r="3" fill="#0ea5e9"/>
+              <!-- Percentage labels -->
+              <text x="355" y="60" font-family="Inter,sans-serif" font-size="10" fill="#0ea5e9" opacity="0.5" font-weight="600">78%</text>
+              <!-- Win/Draw/Loss indicators -->
+              <rect x="310" y="130" width="18" height="6" rx="3" fill="rgba(34,197,94,0.4)" stroke="rgba(34,197,94,0.6)" stroke-width="0.8"/>
+              <rect x="333" y="130" width="18" height="6" rx="3" fill="rgba(250,204,21,0.3)" stroke="rgba(250,204,21,0.5)" stroke-width="0.8"/>
+              <rect x="356" y="130" width="18" height="6" rx="3" fill="rgba(239,68,68,0.3)" stroke="rgba(239,68,68,0.5)" stroke-width="0.8"/>
+              <text x="319" y="148" font-family="Inter,sans-serif" font-size="7" fill="rgba(34,197,94,0.7)" text-anchor="middle">W</text>
+              <text x="342" y="148" font-family="Inter,sans-serif" font-size="7" fill="rgba(250,204,21,0.6)" text-anchor="middle">D</text>
+              <text x="365" y="148" font-family="Inter,sans-serif" font-size="7" fill="rgba(239,68,68,0.6)" text-anchor="middle">L</text>
+            </svg>
           </div>
-          <a class="btn" href="futbol-predictor.html">Ver Proyecto &rarr;</a>
+          <div class="project-card-content">
+            <h3>Fútbol Predictor - Predicción de Resultados La Liga</h3>
+            <p>Sistema de machine learning para predecir resultados de partidos de La Liga española, utilizando modelos ensemble optimizados y 10 temporadas de datos históricos.</p>
+            <div class="tags">
+              <span class="tag">XGBoost</span>
+              <span class="tag">LightGBM</span>
+              <span class="tag">Random Forest</span>
+              <span class="tag">Optuna</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">Python</span>
+            </div>
+            <a class="btn" href="futbol-predictor.html">Ver Proyecto &rarr;</a>
+          </div>
         </div>
 
         <div class="project-card reveal" style="--card-index:2" onclick="location.href='car-chatbot.html'" role="link" tabindex="0">
-          <h3>Car Chatbot - Búsqueda Semántica de Vehículos</h3>
-          <p>Aplicación full-stack basada en RAG (Retrieval Augmented Generation) que permite buscar entre 38,531 vehículos mediante consultas en lenguaje natural, con memoria conversacional y documentación de fuentes.</p>
-          <div class="tags">
-            <span class="tag">FastAPI</span>
-            <span class="tag">React</span>
-            <span class="tag">FAISS</span>
-            <span class="tag">OpenAI GPT-4o-mini</span>
-            <span class="tag">LangChain</span>
-            <span class="tag">Python</span>
-            <span class="tag">RAG</span>
+          <div class="project-card-image">
+            <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-chatbot" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0f172a"/>
+                  <stop offset="100%" style="stop-color:#1a3350"/>
+                </linearGradient>
+                <linearGradient id="car-body" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:rgba(56,189,248,0.2)"/>
+                  <stop offset="100%" style="stop-color:rgba(14,165,233,0.08)"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#grad-chatbot)"/>
+              <!-- Car - detailed side view -->
+              <g transform="translate(40, 10)">
+                <!-- Car body -->
+                <path d="M30,95 L35,95 L40,78 L55,65 L80,58 L110,55 L130,58 L145,65 L150,78 L155,95 L160,95" fill="url(#car-body)" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"/>
+                <!-- Windows -->
+                <path d="M58,65 L70,58 L110,55 L128,58 L135,65 Z" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="1" opacity="0.6"/>
+                <line x1="95" y1="56" x2="95" y2="65" stroke="#38bdf8" stroke-width="0.8" opacity="0.5"/>
+                <!-- Headlight -->
+                <ellipse cx="152" cy="82" rx="5" ry="4" fill="rgba(250,204,21,0.15)" stroke="rgba(250,204,21,0.5)" stroke-width="0.8"/>
+                <!-- Taillight -->
+                <ellipse cx="37" cy="82" rx="4" ry="3" fill="rgba(239,68,68,0.2)" stroke="rgba(239,68,68,0.5)" stroke-width="0.8"/>
+                <!-- Wheels -->
+                <circle cx="60" cy="98" r="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+                <circle cx="60" cy="98" r="7" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="60" cy="98" r="2.5" fill="#38bdf8" opacity="0.4"/>
+                <circle cx="135" cy="98" r="12" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+                <circle cx="135" cy="98" r="7" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.5"/>
+                <circle cx="135" cy="98" r="2.5" fill="#38bdf8" opacity="0.4"/>
+                <!-- Ground line -->
+                <line x1="20" y1="110" x2="170" y2="110" stroke="#38bdf8" stroke-width="0.5" opacity="0.2"/>
+              </g>
+              <!-- Chat interface -->
+              <g transform="translate(220, 15)">
+                <!-- Chat window frame -->
+                <rect x="0" y="0" width="155" height="105" rx="8" fill="rgba(56,189,248,0.05)" stroke="#38bdf8" stroke-width="1.2"/>
+                <!-- Title bar -->
+                <rect x="0" y="0" width="155" height="18" rx="8" fill="rgba(56,189,248,0.08)"/>
+                <rect x="0" y="10" width="155" height="8" fill="rgba(56,189,248,0.08)"/>
+                <circle cx="12" cy="9" r="2.5" fill="rgba(239,68,68,0.5)"/>
+                <circle cx="22" cy="9" r="2.5" fill="rgba(250,204,21,0.5)"/>
+                <circle cx="32" cy="9" r="2.5" fill="rgba(34,197,94,0.5)"/>
+                <!-- User message -->
+                <rect x="45" y="26" width="100" height="16" rx="8" fill="rgba(14,165,233,0.2)" stroke="#0ea5e9" stroke-width="0.8"/>
+                <line x1="55" y1="34" x2="90" y2="34" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+                <line x1="96" y1="34" x2="135" y2="34" stroke="#0ea5e9" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+                <!-- Bot message -->
+                <rect x="10" y="50" width="115" height="22" rx="8" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.8"/>
+                <line x1="20" y1="58" x2="70" y2="58" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+                <line x1="76" y1="58" x2="115" y2="58" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+                <line x1="20" y1="66" x2="55" y2="66" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" opacity="0.25"/>
+                <!-- Bot avatar -->
+                <circle cx="20" cy="87" r="6" fill="rgba(56,189,248,0.12)" stroke="#38bdf8" stroke-width="0.8"/>
+                <circle cx="18" cy="85.5" r="1.2" fill="#38bdf8" opacity="0.6"/>
+                <circle cx="22" cy="85.5" r="1.2" fill="#38bdf8" opacity="0.6"/>
+                <path d="M17,89 Q20,91 23,89" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.5"/>
+                <!-- Typing indicator -->
+                <circle cx="38" cy="87" r="2" fill="#38bdf8" opacity="0.3"/>
+                <circle cx="46" cy="87" r="2" fill="#38bdf8" opacity="0.5"/>
+                <circle cx="54" cy="87" r="2" fill="#38bdf8" opacity="0.7"/>
+              </g>
+              <!-- RAG connection arrows -->
+              <line x1="210" y1="75" x2="225" y2="55" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="3,3" opacity="0.35"/>
+              <line x1="210" y1="85" x2="225" y2="90" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="3,3" opacity="0.35"/>
+              <!-- Vector dots representing embeddings -->
+              <g opacity="0.3">
+                <circle cx="50" cy="140" r="1.5" fill="#38bdf8"/>
+                <circle cx="62" cy="145" r="1.5" fill="#38bdf8"/>
+                <circle cx="75" cy="138" r="1.5" fill="#38bdf8"/>
+                <circle cx="88" cy="148" r="1.5" fill="#0ea5e9"/>
+                <circle cx="100" cy="142" r="1.5" fill="#38bdf8"/>
+                <circle cx="115" cy="150" r="1.5" fill="#0ea5e9"/>
+                <circle cx="128" cy="140" r="1.5" fill="#38bdf8"/>
+                <circle cx="140" cy="147" r="1.5" fill="#38bdf8"/>
+              </g>
+              <!-- Label -->
+              <text x="95" y="135" font-family="Inter,sans-serif" font-size="8" fill="#38bdf8" opacity="0.3" text-anchor="middle" font-weight="500">EMBEDDINGS</text>
+            </svg>
           </div>
-          <a class="btn" href="car-chatbot.html">Ver Proyecto &rarr;</a>
+          <div class="project-card-content">
+            <h3>Car Chatbot - Búsqueda Semántica de Vehículos</h3>
+            <p>Aplicación full-stack basada en RAG (Retrieval Augmented Generation) que permite buscar entre 38,531 vehículos mediante consultas en lenguaje natural, con memoria conversacional y documentación de fuentes.</p>
+            <div class="tags">
+              <span class="tag">FastAPI</span>
+              <span class="tag">React</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">OpenAI GPT-4o-mini</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">Python</span>
+              <span class="tag">RAG</span>
+            </div>
+            <a class="btn" href="car-chatbot.html">Ver Proyecto &rarr;</a>
+          </div>
         </div>
 
       </div>
@@ -91,17 +253,63 @@
       <div class="projects-grid">
 
         <div class="project-card reveal" style="--card-index:0" onclick="window.open('https://hdl.handle.net/20.500.12008/42432','_blank')" role="link" tabindex="0">
-          <h3>Sistema de Inspección de Estructuras Civiles Utilizando Drones Autónomos</h3>
-          <p>Sistema basado en una flota de drones autónomos para realizar inspecciones edilicias en la Facultad de Ingeniería (UDELAR), mitigando riesgos de seguridad y reduciendo tiempos respecto al proceso manual. Se implementaron algoritmos de A* y Multiple Traveling Salesman Problem (MTSP) para optimizar rutas y asignación de drones.</p>
-          <div class="tags">
-            <span class="tag">ROS</span>
-            <span class="tag">PX4</span>
-            <span class="tag">Gazebo</span>
-            <span class="tag">Python</span>
-            <span class="tag">MongoDB</span>
-            <span class="tag">React</span>
+          <div class="project-card-image">
+            <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-drone" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0f172a"/>
+                  <stop offset="100%" style="stop-color:#1e3a5f"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#grad-drone)"/>
+              <!-- Drone body -->
+              <rect x="185" y="62" width="30" height="16" rx="4" fill="rgba(56,189,248,0.15)" stroke="#38bdf8" stroke-width="1.5"/>
+              <!-- Arms -->
+              <line x1="185" y1="65" x2="145" y2="45" stroke="#38bdf8" stroke-width="1.5"/>
+              <line x1="215" y1="65" x2="255" y2="45" stroke="#38bdf8" stroke-width="1.5"/>
+              <line x1="185" y1="75" x2="145" y2="95" stroke="#38bdf8" stroke-width="1.5"/>
+              <line x1="215" y1="75" x2="255" y2="95" stroke="#38bdf8" stroke-width="1.5"/>
+              <!-- Rotors -->
+              <circle cx="145" cy="45" r="3" fill="#38bdf8" opacity="0.7"/>
+              <ellipse cx="145" cy="45" rx="18" ry="4" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+              <circle cx="255" cy="45" r="3" fill="#38bdf8" opacity="0.7"/>
+              <ellipse cx="255" cy="45" rx="18" ry="4" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+              <circle cx="145" cy="95" r="3" fill="#38bdf8" opacity="0.7"/>
+              <ellipse cx="145" cy="95" rx="18" ry="4" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+              <circle cx="255" cy="95" r="3" fill="#38bdf8" opacity="0.7"/>
+              <ellipse cx="255" cy="95" rx="18" ry="4" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+              <!-- Camera/sensor -->
+              <circle cx="200" cy="82" r="4" fill="none" stroke="#0ea5e9" stroke-width="1.2"/>
+              <circle cx="200" cy="82" r="1.5" fill="#0ea5e9"/>
+              <!-- Building outline -->
+              <rect x="60" y="110" width="35" height="40" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
+              <rect x="65" y="118" width="8" height="8" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <rect x="80" y="118" width="8" height="8" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <rect x="65" y="132" width="8" height="8" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <rect x="80" y="132" width="8" height="8" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <rect x="305" y="100" width="45" height="50" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
+              <rect x="312" y="108" width="10" height="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <rect x="330" y="108" width="10" height="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <rect x="312" y="126" width="10" height="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <rect x="330" y="126" width="10" height="10" fill="rgba(56,189,248,0.08)" stroke="#38bdf8" stroke-width="0.5" opacity="0.3"/>
+              <!-- Route path dashed -->
+              <path d="M200,86 L90,120" fill="none" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+              <path d="M200,86 L327,110" fill="none" stroke="#0ea5e9" stroke-width="1" stroke-dasharray="4,3" opacity="0.4"/>
+            </svg>
           </div>
-          <a class="btn" href="https://hdl.handle.net/20.500.12008/42432" target="_blank" rel="noopener noreferrer">Ver en COLIBRI &rarr;</a>
+          <div class="project-card-content">
+            <h3>Sistema de Inspección de Estructuras Civiles Utilizando Drones Autónomos</h3>
+            <p>Sistema basado en una flota de drones autónomos para realizar inspecciones edilicias en la Facultad de Ingeniería (UDELAR), mitigando riesgos de seguridad y reduciendo tiempos respecto al proceso manual. Se implementaron algoritmos de A* y Multiple Traveling Salesman Problem (MTSP) para optimizar rutas y asignación de drones.</p>
+            <div class="tags">
+              <span class="tag">ROS</span>
+              <span class="tag">PX4</span>
+              <span class="tag">Gazebo</span>
+              <span class="tag">Python</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">React</span>
+            </div>
+            <a class="btn" href="https://hdl.handle.net/20.500.12008/42432" target="_blank" rel="noopener noreferrer">Ver en COLIBRI &rarr;</a>
+          </div>
         </div>
 
       </div>
