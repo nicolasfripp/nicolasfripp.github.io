@@ -10,88 +10,88 @@
 <body>
 
   <header>
-    <a class="back-link" href="index.html">&larr; Volver al Portafolio</a>
-    <h1>Predicci&oacute;n de Precios de Casas en Uruguay</h1>
-    <p>Modelo de Machine Learning para Estimar Valores Inmobiliarios</p>
+    <a class="back-link" href="index.html" data-i18n="back">&larr; Volver al Portafolio</a>
+    <h1 data-i18n="casas.page.title">Predicci&oacute;n de Precios de Casas en Uruguay</h1>
+    <p data-i18n="casas.subtitle">Modelo de Machine Learning para Estimar Valores Inmobiliarios</p>
   </header>
 
   <main>
 
     <section class="detail-section">
-      <h2>Objetivo del Proyecto</h2>
+      <h2 data-i18n="casas.obj.title">Objetivo del Proyecto</h2>
       <div class="detail-with-image">
-        <p>Desarrollar un modelo predictivo capaz de estimar el precio de venta de casas en Uruguay a partir de sus caracter&iacute;sticas. El modelo busca servir como herramienta de referencia para vendedores que necesitan fijar un precio, para compradores que quieren detectar oportunidades, y para analizar qu&eacute; variables son las m&aacute;s determinantes en el valor de una propiedad.</p>
+        <p data-i18n="casas.obj.text">Desarrollar un modelo predictivo capaz de estimar el precio de venta de casas en Uruguay a partir de sus caracter&iacute;sticas. El modelo busca servir como herramienta de referencia para vendedores que necesitan fijar un precio, para compradores que quieren detectar oportunidades, y para analizar qu&eacute; variables son las m&aacute;s determinantes en el valor de una propiedad.</p>
         <img class="project-hero" src="casas.jpg" alt="Predicción de Precios de Casas en Uruguay">
       </div>
     </section>
 
     <section class="detail-section">
-      <h2>Problema Abordado</h2>
-      <p>El mercado inmobiliario uruguayo carece de herramientas accesibles para estimar precios de propiedades de forma objetiva. Se parti&oacute; de una base de datos de m&aacute;s de 177,000 publicaciones de casas en venta extra&iacute;das mediante web scraping de Mercado Libre y El Gallito, abarcando el per&iacute;odo 2023-2025. El desaf&iacute;o principal radic&oacute; en la calidad de los datos: duplicados, valores faltantes, errores de carga por parte de los usuarios (monedas incorrectas, valores ficticios como "1111111"), y la necesidad de unificar dos fuentes de datos con estructuras diferentes.</p>
+      <h2 data-i18n="casas.prob.title">Problema Abordado</h2>
+      <p data-i18n="casas.prob.text">El mercado inmobiliario uruguayo carece de herramientas accesibles para estimar precios de propiedades de forma objetiva. Se parti&oacute; de una base de datos de m&aacute;s de 177,000 publicaciones de casas en venta extra&iacute;das mediante web scraping de Mercado Libre y El Gallito, abarcando el per&iacute;odo 2023-2025. El desaf&iacute;o principal radic&oacute; en la calidad de los datos: duplicados, valores faltantes, errores de carga por parte de los usuarios (monedas incorrectas, valores ficticios como "1111111"), y la necesidad de unificar dos fuentes de datos con estructuras diferentes.</p>
     </section>
 
     <section class="detail-section">
-      <h2>Decisiones T&eacute;cnicas</h2>
+      <h2 data-i18n="casas.tech.title">Decisiones T&eacute;cnicas</h2>
       <ul>
-        <li>Se unificaron dos fuentes de datos (Mercado Libre y El Gallito) con variables equivalentes pero en columnas distintas, mergeando NEIGHBORHOOD/ADDRESS_CITY_NAME, CONDITION/ITEM_CONDITION y las fechas de proceso</li>
-        <li>Se imputaron departamentos faltantes mediante mapeo por moda de barrio y prompt engineering con IA para los casos restantes, logrando pasar de 94% nulos a 0%</li>
-        <li>Se mantuvieron dos datasets paralelos: uno con agrupaci&oacute;n de categor&iacute;as para regresi&oacute;n lineal y otro preservando todas las categor&iacute;as para CatBoost</li>
-        <li>Se eligi&oacute; CatBoost como modelo principal dado que 6 de las 10 variables explicativas son categ&oacute;ricas, aprovechando su manejo nativo de este tipo de datos</li>
-        <li>Se entrenaron modelos segmentados por departamento (Montevideo, Maldonado, Canelones) para capturar din&aacute;micas locales del mercado</li>
+        <li data-i18n="casas.tech.li1">Se unificaron dos fuentes de datos (Mercado Libre y El Gallito) con variables equivalentes pero en columnas distintas, mergeando NEIGHBORHOOD/ADDRESS_CITY_NAME, CONDITION/ITEM_CONDITION y las fechas de proceso</li>
+        <li data-i18n="casas.tech.li2">Se imputaron departamentos faltantes mediante mapeo por moda de barrio y prompt engineering con IA para los casos restantes, logrando pasar de 94% nulos a 0%</li>
+        <li data-i18n="casas.tech.li3">Se mantuvieron dos datasets paralelos: uno con agrupaci&oacute;n de categor&iacute;as para regresi&oacute;n lineal y otro preservando todas las categor&iacute;as para CatBoost</li>
+        <li data-i18n="casas.tech.li4">Se eligi&oacute; CatBoost como modelo principal dado que 6 de las 10 variables explicativas son categ&oacute;ricas, aprovechando su manejo nativo de este tipo de datos</li>
+        <li data-i18n="casas.tech.li5">Se entrenaron modelos segmentados por departamento (Montevideo, Maldonado, Canelones) para capturar din&aacute;micas locales del mercado</li>
       </ul>
     </section>
 
     <section class="detail-section">
-      <h2>Tecnolog&iacute;as y Metodolog&iacute;as</h2>
+      <h2 data-i18n="casas.tecno.title">Tecnolog&iacute;as y Metodolog&iacute;as</h2>
 
       <h3>Machine Learning</h3>
       <div class="tags">
         <span class="tag">CatBoost</span>
-        <span class="tag">Regresi&oacute;n Lineal (OLS)</span>
+        <span class="tag" data-i18n="tag.regresion">Regresi&oacute;n Lineal (OLS)</span>
         <span class="tag">Optuna</span>
         <span class="tag">scikit-learn</span>
       </div>
 
-      <h3>Procesamiento de Datos</h3>
+      <h3 data-i18n="casas.procesamiento">Procesamiento de Datos</h3>
       <div class="tags">
         <span class="tag">Pandas</span>
         <span class="tag">NumPy</span>
         <span class="tag">Statsmodels</span>
       </div>
 
-      <h3>Visualizaci&oacute;n</h3>
+      <h3 data-i18n="casas.visualizacion">Visualizaci&oacute;n</h3>
       <div class="tags">
         <span class="tag">Matplotlib</span>
         <span class="tag">Seaborn</span>
       </div>
 
-      <h3>Datos</h3>
-      <p>+177,000 publicaciones de casas en venta en Uruguay (Mercado Libre y El Gallito), reducidas a ~37,000 observaciones tras limpieza. Variables finales: barrio, departamento, &aacute;rea cubierta, ba&ntilde;os, dormitorios, garajes, condici&oacute;n, aire acondicionado, tour virtual, tipo de publicaci&oacute;n y origen.</p>
+      <h3 data-i18n="casas.datos.title">Datos</h3>
+      <p data-i18n="casas.datos.text">+177,000 publicaciones de casas en venta en Uruguay (Mercado Libre y El Gallito), reducidas a ~37,000 observaciones tras limpieza. Variables finales: barrio, departamento, &aacute;rea cubierta, ba&ntilde;os, dormitorios, garajes, condici&oacute;n, aire acondicionado, tour virtual, tipo de publicaci&oacute;n y origen.</p>
     </section>
 
     <section class="detail-section">
-      <h2>Pipeline de Datos</h2>
+      <h2 data-i18n="casas.pipeline.title">Pipeline de Datos</h2>
       <ol>
-        <li>Carga y unificaci&oacute;n de dos fuentes de datos con variables equivalentes en columnas distintas</li>
-        <li>Eliminaci&oacute;n de variables irrelevantes (descripci&oacute;n, t&iacute;tulo, IDs, direcci&oacute;n, posici&oacute;n, a&ntilde;o de construcci&oacute;n)</li>
-        <li>Imputaci&oacute;n de datos faltantes: departamentos por moda de barrio + IA, condici&oacute;n reclasificada en 4 categor&iacute;as (nuevo, usado, en construcci&oacute;n, sin especificar)</li>
-        <li>Conversi&oacute;n de precios a USD usando tasas de cambio mensuales y eliminaci&oacute;n de registros con errores de moneda</li>
-        <li>Limpieza de outliers: remoci&oacute;n de valores ficticios ("1111111"), precios menores a USD 1,000, y outliers por IQR</li>
-        <li>Eliminaci&oacute;n de duplicados y an&aacute;lisis exploratorio con visualizaciones univariadas y bivariadas</li>
-        <li>Entrenamiento de modelos: Regresi&oacute;n Lineal (con transformaciones logar&iacute;tmicas) y CatBoost (con optimizaci&oacute;n Optuna)</li>
+        <li data-i18n="casas.pipeline.li1">Carga y unificaci&oacute;n de dos fuentes de datos con variables equivalentes en columnas distintas</li>
+        <li data-i18n="casas.pipeline.li2">Eliminaci&oacute;n de variables irrelevantes (descripci&oacute;n, t&iacute;tulo, IDs, direcci&oacute;n, posici&oacute;n</li>
+        <li data-i18n="casas.pipeline.li3">Imputaci&oacute;n de datos faltantes: departamentos por moda de barrio + IA, condici&oacute;n reclasificada en 4 categor&iacute;as (nuevo, usado, en construcci&oacute;n, sin especificar)</li>
+        <li data-i18n="casas.pipeline.li4">Conversi&oacute;n de precios a USD usando tasas de cambio mensuales y eliminaci&oacute;n de registros con errores de moneda</li>
+        <li data-i18n="casas.pipeline.li5">Limpieza de outliers: remoci&oacute;n de valores ficticios ("1111111"), precios menores a USD 1,000, y outliers por IQR</li>
+        <li data-i18n="casas.pipeline.li6">Eliminaci&oacute;n de duplicados y an&aacute;lisis exploratorio con visualizaciones univariadas y bivariadas</li>
+        <li data-i18n="casas.pipeline.li7">Entrenamiento de modelos: Regresi&oacute;n Lineal (con transformaciones logar&iacute;tmicas) y CatBoost (con optimizaci&oacute;n Optuna)</li>
       </ol>
     </section>
 
     <section class="detail-section">
-      <h2>Resultados Obtenidos</h2>
+      <h2 data-i18n="casas.res.title">Resultados Obtenidos</h2>
       <ul>
-        <li>Regresi&oacute;n Lineal: MAPE de 39.9% &mdash; modelo base con limitaciones por la naturaleza categ&oacute;rica de los datos</li>
-        <li>CatBoost: MAPE de 33.8% &mdash; mejora significativa gracias al manejo nativo de variables categ&oacute;ricas</li>
-        <li>CatBoost + Optuna: MAPE de 32.0% &mdash; optimizaci&oacute;n de hiperpar&aacute;metros con validaci&oacute;n cruzada (K-Fold, 5 splits)</li>
-        <li>CatBoost + Optuna (Montevideo): MAPE de 25.0% &mdash; mejor resultado, equivalente a un error t&iacute;pico de &plusmn; USD 50,000 sobre un precio promedio de USD 200,000</li>
-        <li>CatBoost + Optuna (Maldonado): MAPE de 37.0%</li>
-        <li>La segmentaci&oacute;n geogr&aacute;fica demostr&oacute; que los modelos locales capturan mejor las din&aacute;micas de cada mercado</li>
-        <li>El modelo final constituye una herramienta confiable para estimar valores inmobiliarios en el mercado uruguayo</li>
+        <li data-i18n="casas.res.li1">Regresi&oacute;n Lineal: MAPE de 39.9% &mdash; modelo base con limitaciones por la naturaleza categ&oacute;rica de los datos</li>
+        <li data-i18n="casas.res.li2">CatBoost: MAPE de 33.8% &mdash; mejora significativa gracias al manejo nativo de variables categ&oacute;ricas</li>
+        <li data-i18n="casas.res.li3">CatBoost + Optuna: MAPE de 32.0% &mdash; optimizaci&oacute;n de hiperpar&aacute;metros con validaci&oacute;n cruzada (K-Fold, 5 splits)</li>
+        <li data-i18n="casas.res.li4">CatBoost + Optuna (Montevideo): MAPE de 25.0% &mdash; mejor resultado, equivalente a un error t&iacute;pico de &plusmn; USD 50,000 sobre un precio promedio de USD 200,000</li>
+        <li data-i18n="casas.res.li5">CatBoost + Optuna (Maldonado): MAPE de 37.0%</li>
+        <li data-i18n="casas.res.li6">La segmentaci&oacute;n geogr&aacute;fica demostr&oacute; que los modelos locales capturan mejor las din&aacute;micas de cada mercado</li>
+        <li data-i18n="casas.res.li7">El modelo final constituye una herramienta confiable para estimar valores inmobiliarios en el mercado uruguayo</li>
       </ul>
     </section>
 
@@ -101,5 +101,6 @@
     <p>Nicolás Fripp Rodríguez &mdash; 2026</p>
   </footer>
 
+  <script src="i18n.js"></script>
 </body>
 </html>
