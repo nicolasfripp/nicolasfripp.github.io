@@ -20,7 +20,7 @@
     <section class="detail-section">
       <h2 data-i18n="chatbot.obj.title">Objetivo del Proyecto</h2>
       <div class="detail-with-image">
-        <p data-i18n="chatbot.obj.text">Desarrollar una aplicación conversacional que permita a usuarios buscar vehículos mediante lenguaje natural, superando las limitaciones de los filtros tradicionales de búsqueda. El sistema debía ser capaz de interpretar consultas complejas como "necesito un SUV rojo por menos de $10,000" y devolver resultados relevantes con documentación de fuentes.</p>
+        <p data-i18n="chatbot.obj.text">Desarrollar una aplicación conversacional que permita a usuarios buscar vehículos mediante lenguaje natural. El sistema debía ser capaz de interpretar consultas como "necesito un SUV rojo por menos de $10,000" y devolver resultados relevantes con documentación de fuentes.</p>
         <img class="project-hero" src="car-chatbot.jpg" alt="Car Chatbot - Búsqueda Semántica de Vehículos">
       </div>
     </section>
@@ -35,7 +35,7 @@
       <ul>
         <li data-i18n="chatbot.tech.li1">Se eligió RAG (Retrieval Augmented Generation) sobre filtrado tradicional para permitir consultas semánticas flexibles</li>
         <li data-i18n="chatbot.tech.li2">FAISS (Facebook AI Similarity Search) para indexación eficiente de 38,531 embeddings vectoriales</li>
-        <li data-i18n="chatbot.tech.li3">GPT-4o-mini como modelo de lenguaje por su balance costo/rendimiento (~$0.0001 USD por consulta)</li>
+        <li data-i18n="chatbot.tech.li3">GPT-4o-mini como modelo de lenguaje por su balance costo/rendimiento</li>
         <li data-i18n="chatbot.tech.li4">Implementación de un SummaryBufferMemory custom que mantiene los últimos 1,000 tokens verbatim y resume automáticamente el historial anterior</li>
         <li data-i18n="chatbot.tech.li5">Arquitectura desacoplada: backend FastAPI + frontend React comunicados via REST API</li>
       </ul>

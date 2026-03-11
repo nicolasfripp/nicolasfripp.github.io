@@ -46,8 +46,8 @@
       en: "Predictive model to estimate house values in Uruguay from 177,000+ listings on Mercado Libre and El Gallito, with exhaustive data cleaning and models segmented by department."
     },
     "project.futbol.title": {
-      es: "F\u00fatbol Predictor - Predicci\u00f3n de Resultados La Liga",
-      en: "Football Predictor - La Liga Match Prediction"
+      es: "Prediccion de partidos de futbol - La Liga",
+      en: "Spanish La Liga Match Predictor"
     },
     "project.futbol.desc": {
       es: "Sistema de machine learning para predecir resultados de partidos de La Liga espa\u00f1ola, utilizando modelos ensemble optimizados y 10 temporadas de datos hist\u00f3ricos.",
@@ -96,8 +96,8 @@
       en: "Project Objective"
     },
     "chatbot.obj.text": {
-      es: 'Desarrollar una aplicaci\u00f3n conversacional que permita a usuarios buscar veh\u00edculos mediante lenguaje natural, superando las limitaciones de los filtros tradicionales de b\u00fasqueda. El sistema deb\u00eda ser capaz de interpretar consultas complejas como "necesito un SUV rojo por menos de $10,000" y devolver resultados relevantes con documentaci\u00f3n de fuentes.',
-      en: 'Develop a conversational application that allows users to search for vehicles using natural language, overcoming the limitations of traditional search filters. The system needed to interpret complex queries such as "I need a red SUV for under $10,000" and return relevant results with source documentation.'
+      es: 'Desarrollar una aplicaci\u00f3n conversacional que permita a usuarios buscar veh\u00edculos mediante lenguaje natural. El sistema deb\u00eda ser capaz de interpretar consultas como "necesito un SUV rojo por menos de $10,000" y devolver resultados relevantes con documentaci\u00f3n de fuentes.',
+      en: 'Develop a conversational application that allows users to search for vehicles using natural language. The system needed to interpret queries such as "I need a red SUV for under $10,000" and return relevant results with source documentation.'
     },
     "chatbot.prob.title": {
       es: "Problema Abordado",
@@ -120,8 +120,8 @@
       en: "FAISS (Facebook AI Similarity Search) for efficient indexing of 38,531 vector embeddings"
     },
     "chatbot.tech.li3": {
-      es: "GPT-4o-mini como modelo de lenguaje por su balance costo/rendimiento (~$0.0001 USD por consulta)",
-      en: "GPT-4o-mini as the language model for its cost/performance balance (~$0.0001 USD per query)"
+      es: "GPT-4o-mini como modelo de lenguaje por su balance costo/rendimiento",
+      en: "GPT-4o-mini as the language model for its cost/performance balance"
     },
     "chatbot.tech.li4": {
       es: "Implementaci\u00f3n de un SummaryBufferMemory custom que mantiene los \u00faltimos 1,000 tokens verbatim y resume autom\u00e1ticamente el historial anterior",
@@ -222,8 +222,8 @@
       en: "Problem Addressed"
     },
     "futbol.prob.text": {
-      es: "La predicci\u00f3n de resultados deportivos es un problema de clasificaci\u00f3n multiclase con alta incertidumbre inherente. Los partidos de f\u00fatbol est\u00e1n influenciados por m\u00faltiples factores dif\u00edciles de cuantificar. Este proyecto aborda el desaf\u00edo combinando estad\u00edsticas hist\u00f3ricas de 10 temporadas (2016-2025), datos de mercado de Transfermarkt y cuotas de 5 casas de apuestas para construir modelos predictivos robustos.",
-      en: "Sports outcome prediction is a multiclass classification problem with high inherent uncertainty. Football matches are influenced by multiple factors that are difficult to quantify. This project addresses the challenge by combining historical statistics from 10 seasons (2016-2025), Transfermarkt market data, and odds from 5 bookmakers to build robust predictive models."
+      es: "La predicci\u00f3n de resultados deportivos es un problema de clasificaci\u00f3n multiclase con alta incertidumbre inherente. Los partidos de f\u00fatbol est\u00e1n influenciados por m\u00faltiples factores dif\u00edciles de cuantificar. Este proyecto aborda el desaf\u00edo combinando estad\u00edsticas hist\u00f3ricas de 10 temporadas (2016-2025), datos de mercado de Transfermarkt y cuotas de 5 casas de apuestas para construir modelos predictivos.",
+      en: "Sports outcome prediction is a multiclass classification problem with high inherent uncertainty. Football matches are influenced by multiple factors that are difficult to quantify. This project addresses the challenge by combining historical statistics from 10 seasons (2016-2025), Transfermarkt market data, and odds from 5 bookmakers to build predictive models."
     },
     "futbol.tech.title": {
       es: "Decisiones T\u00e9cnicas",
@@ -314,8 +314,8 @@
       en: "Confusion matrices and detailed classification reports"
     },
     "futbol.res.li6": {
-      es: "Comparaci\u00f3n visual exhaustiva entre modelos y escenarios",
-      en: "Exhaustive visual comparison between models and scenarios"
+      es: "Comparaci\u00f3n visual entre modelos y escenarios",
+      en: "Visual comparison between models and scenarios"
     },
 
     // === casas-predictor.html ===
@@ -388,16 +388,16 @@
       en: "177,000+ house-for-sale listings in Uruguay (Mercado Libre and El Gallito), reduced to ~37,000 observations after cleaning. Final variables: neighborhood, department, covered area, bathrooms, bedrooms, garages, condition, air conditioning, virtual tour, listing type, and source."
     },
     "casas.pipeline.title": {
-      es: "Pipeline de Datos",
-      en: "Data Pipeline"
+      es: "Transformación y Limpieza de datos",
+      en: "Data Transformation and Cleaning"
     },
     "casas.pipeline.li1": {
       es: "Carga y unificaci\u00f3n de dos fuentes de datos con variables equivalentes en columnas distintas",
       en: "Loading and unifying two data sources with equivalent variables in different columns"
     },
     "casas.pipeline.li2": {
-      es: "Eliminaci\u00f3n de variables irrelevantes (descripci\u00f3n, t\u00edtulo, IDs, direcci\u00f3n, posici\u00f3n",
-      en: "Removal of irrelevant variables (description, title, IDs, address, position"
+      es: "Eliminaci\u00f3n de variables irrelevantes (descripci\u00f3n, t\u00edtulo, IDs, etc)",
+      en: "Removal of irrelevant variables (description, title, IDs, etc)"
     },
     "casas.pipeline.li3": {
       es: "Imputaci\u00f3n de datos faltantes: departamentos por moda de barrio + IA, condici\u00f3n reclasificada en 4 categor\u00edas (nuevo, usado, en construcci\u00f3n, sin especificar)",
