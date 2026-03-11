@@ -65,6 +65,10 @@
       es: "Ver Proyecto \u2192",
       en: "View Project \u2192"
     },
+    "btn.codigo": {
+      es: "Ver c\u00f3digo \u2197",
+      en: "View code \u2197"
+    },
     "thesis.title": {
       es: "Tesis de Grado - Ingenier\u00eda en Computaci\u00f3n",
       en: "Degree Thesis - Computer Engineering"

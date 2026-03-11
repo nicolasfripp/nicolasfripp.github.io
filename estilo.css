@@ -273,6 +273,10 @@ section h2 {
   transform: translateY(-1px);
 }
 
+.repo-btn {
+  margin-top: 20px;
+}
+
 /* Links Section */
 .links-list {
   list-style: none;
