@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prediccion de partidos de futbol - La Liga - Nicolás Fripp Rodríguez</title>
+  <title>From Data to Goal - Nicolás Fripp Rodríguez</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo.css">
 </head>
@@ -11,7 +11,7 @@
 
   <header>
     <a class="back-link" href="index.html" data-i18n="back">&larr; Volver al Portafolio</a>
-    <h1>Prediccion de partidos de futbol - La Liga</h1>
+    <h1>From Data to Goal</h1>
     <p data-i18n="futbol.subtitle">Predicci&oacute;n de Resultados de La Liga Espa&ntilde;ola mediante Machine Learning</p>
     <a class="btn repo-btn" href="https://github.com/nicolasfripp/nicolasfripp.github.io/tree/master/public%20projects/football_prediction" target="_blank" rel="noopener noreferrer" data-i18n="btn.codigo">Ver código ↗</a>
   </header>
@@ -22,7 +22,7 @@
       <h2 data-i18n="futbol.obj.title">Objetivo del Proyecto</h2>
       <div class="detail-with-image">
         <p data-i18n="futbol.obj.text">Construir un sistema de machine learning capaz de predecir resultados de partidos de La Liga espa&ntilde;ola, generando probabilidades para tres posibles desenlaces: victoria local (H), empate (D) y victoria visitante (A). El sistema implementa dos escenarios de predicci&oacute;n: pre-partido y en vivo (medio tiempo).</p>
-        <img class="project-hero" src="laliga.png" alt="Prediccion de partidos de futbol - La Liga">
+        <img class="project-hero" src="laliga.png" alt="From Data to Goal">
       </div>
     </section>
 
@@ -85,14 +85,64 @@
 
     <section class="detail-section">
       <h2 data-i18n="futbol.res.title">Resultados Obtenidos</h2>
-      <ul>
-        <li data-i18n="futbol.res.li1">6 modelos entrenados: 3 algoritmos (Random Forest, XGBoost, LightGBM) &times; 2 escenarios (pre-partido e in-play)</li>
-        <li data-i18n="futbol.res.li2">M&eacute;tricas de evaluaci&oacute;n: Accuracy, Log Loss, F1-Weighted y F1-Macro</li>
-        <li data-i18n="futbol.res.li3">Los modelos in-play mejoran significativamente la accuracy al incorporar datos de medio tiempo</li>
-        <li data-i18n="futbol.res.li4">An&aacute;lisis completo de importancia de features para cada modelo</li>
-        <li data-i18n="futbol.res.li5">Matrices de confusi&oacute;n y reportes de clasificaci&oacute;n detallados</li>
-        <li data-i18n="futbol.res.li6">Comparaci&oacute;n visual entre modelos y escenarios</li>
-      </ul>
+
+      <h3 data-i18n="futbol.res.prematch">Pre-Partido</h3>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th data-i18n="futbol.res.th.modelo">Modelo</th>
+            <th>Accuracy</th>
+            <th>F1-Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Random Forest</td>
+            <td>0.51</td>
+            <td class="best-row">0.52</td>
+          </tr>
+          <tr>
+            <td>LightGBM</td>
+            <td class="best-row">0.54</td>
+            <td>0.50</td>
+          </tr>
+          <tr>
+            <td>XGBoost</td>
+            <td>0.48</td>
+            <td>0.47</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 data-i18n="futbol.res.inplay">In-Play (Datos de Medio Tiempo)</h3>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th data-i18n="futbol.res.th.modelo2">Modelo</th>
+            <th>Accuracy</th>
+            <th>F1-Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="best-row">
+            <td>Random Forest</td>
+            <td>0.56</td>
+            <td>0.57</td>
+          </tr>
+          <tr>
+            <td>LightGBM</td>
+            <td>0.54</td>
+            <td>0.55</td>
+          </tr>
+          <tr>
+            <td>XGBoost</td>
+            <td>0.54</td>
+            <td>0.56</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top: 16px;" data-i18n="futbol.res.conclusion">Los modelos in-play mejoran significativamente las m&eacute;tricas al incorporar datos de medio tiempo. Se prioriz&oacute; el F1-Score sobre el Accuracy por tratarse de un problema con clases desbalanceadas (los empates son menos frecuentes).</p>
     </section>
 
   </main>

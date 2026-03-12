@@ -85,15 +85,48 @@
 
     <section class="detail-section">
       <h2 data-i18n="casas.res.title">Resultados Obtenidos</h2>
-      <ul>
-        <li data-i18n="casas.res.li1">Regresi&oacute;n Lineal: MAPE de 39.9% &mdash; modelo base con limitaciones por la naturaleza categ&oacute;rica de los datos</li>
-        <li data-i18n="casas.res.li2">CatBoost: MAPE de 33.8% &mdash; mejora significativa gracias al manejo nativo de variables categ&oacute;ricas</li>
-        <li data-i18n="casas.res.li3">CatBoost + Optuna: MAPE de 32.0% &mdash; optimizaci&oacute;n de hiperpar&aacute;metros con validaci&oacute;n cruzada (K-Fold, 5 splits)</li>
-        <li data-i18n="casas.res.li4">CatBoost + Optuna (Montevideo): MAPE de 25.0% &mdash; mejor resultado, equivalente a un error t&iacute;pico de &plusmn; USD 50,000 sobre un precio promedio de USD 200,000</li>
-        <li data-i18n="casas.res.li5">CatBoost + Optuna (Maldonado): MAPE de 37.0%</li>
-        <li data-i18n="casas.res.li6">La segmentaci&oacute;n geogr&aacute;fica demostr&oacute; que los modelos locales capturan mejor las din&aacute;micas de cada mercado</li>
-        <li data-i18n="casas.res.li7">El modelo final constituye una herramienta confiable para estimar valores inmobiliarios en el mercado uruguayo</li>
-      </ul>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th data-i18n="casas.res.th.modelo">Modelo</th>
+            <th>MAPE</th>
+            <th data-i18n="casas.res.th.obs">Observaciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-i18n="casas.res.row1.modelo">Regresi&oacute;n Lineal (OLS)</td>
+            <td>39.9%</td>
+            <td data-i18n="casas.res.row1.obs">Modelo base con limitaciones por la naturaleza categ&oacute;rica de los datos</td>
+          </tr>
+          <tr>
+            <td>CatBoost</td>
+            <td>33.8%</td>
+            <td data-i18n="casas.res.row2.obs">Mejora significativa gracias al manejo nativo de variables categ&oacute;ricas</td>
+          </tr>
+          <tr>
+            <td>CatBoost + Optuna</td>
+            <td>32.0%</td>
+            <td data-i18n="casas.res.row3.obs">Optimizaci&oacute;n de hiperpar&aacute;metros con K-Fold (5 splits)</td>
+          </tr>
+          <tr class="best-row">
+            <td>CatBoost + Optuna (Montevideo)</td>
+            <td>25.0%</td>
+            <td data-i18n="casas.res.row4.obs">Mejor resultado &mdash; error t&iacute;pico de &plusmn; USD 50,000 sobre un precio promedio de USD 200,000</td>
+          </tr>
+          <tr>
+            <td>CatBoost + Optuna (Maldonado)</td>
+            <td>37.0%</td>
+            <td data-i18n="casas.res.row5.obs">Modelo segmentado por departamento</td>
+          </tr>
+          <tr>
+            <td>CatBoost + Optuna (Canelones)</td>
+            <td>29.7%</td>
+            <td data-i18n="casas.res.row6.obs">Modelo segmentado por departamento</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 16px;" data-i18n="casas.res.conclusion">La segmentaci&oacute;n geogr&aacute;fica demostr&oacute; que los modelos locales capturan mejor las din&aacute;micas de cada mercado. El modelo final constituye una herramienta confiable para estimar valores inmobiliarios en el mercado uruguayo.</p>
     </section>
 
   </main>

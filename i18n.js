@@ -46,8 +46,8 @@
       en: "Predictive model to estimate house values in Uruguay from 177,000+ listings on Mercado Libre and El Gallito, with exhaustive data cleaning and models segmented by department."
     },
     "project.futbol.title": {
-      es: "Prediccion de partidos de futbol - La Liga",
-      en: "Spanish La Liga Match Predictor"
+      es: "From Data to Goal",
+      en: "From Data to Goal"
     },
     "project.futbol.desc": {
       es: "Sistema de machine learning para predecir resultados de partidos de La Liga espa\u00f1ola, utilizando modelos ensemble optimizados y 10 temporadas de datos hist\u00f3ricos.",
@@ -297,29 +297,25 @@
       es: "Resultados Obtenidos",
       en: "Results Obtained"
     },
-    "futbol.res.li1": {
-      es: "6 modelos entrenados: 3 algoritmos (Random Forest, XGBoost, LightGBM) \u00d7 2 escenarios (pre-partido e in-play)",
-      en: "6 trained models: 3 algorithms (Random Forest, XGBoost, LightGBM) \u00d7 2 scenarios (pre-match and in-play)"
+    "futbol.res.prematch": {
+      es: "Pre-Partido",
+      en: "Pre-Match"
     },
-    "futbol.res.li2": {
-      es: "M\u00e9tricas de evaluaci\u00f3n: Accuracy, Log Loss, F1-Weighted y F1-Macro",
-      en: "Evaluation metrics: Accuracy, Log Loss, F1-Weighted, and F1-Macro"
+    "futbol.res.inplay": {
+      es: "In-Play (Datos de Medio Tiempo)",
+      en: "In-Play (Halftime Data)"
     },
-    "futbol.res.li3": {
-      es: "Los modelos in-play mejoran significativamente la accuracy al incorporar datos de medio tiempo",
-      en: "In-play models significantly improve accuracy by incorporating halftime data"
+    "futbol.res.th.modelo": {
+      es: "Modelo",
+      en: "Model"
     },
-    "futbol.res.li4": {
-      es: "An\u00e1lisis completo de importancia de features para cada modelo",
-      en: "Complete feature importance analysis for each model"
+    "futbol.res.th.modelo2": {
+      es: "Modelo",
+      en: "Model"
     },
-    "futbol.res.li5": {
-      es: "Matrices de confusi\u00f3n y reportes de clasificaci\u00f3n detallados",
-      en: "Confusion matrices and detailed classification reports"
-    },
-    "futbol.res.li6": {
-      es: "Comparaci\u00f3n visual entre modelos y escenarios",
-      en: "Visual comparison between models and scenarios"
+    "futbol.res.conclusion": {
+      es: "Los modelos in-play mejoran significativamente las m\u00e9tricas al incorporar datos de medio tiempo. Se prioriz\u00f3 el F1-Score sobre el Accuracy por tratarse de un problema con clases desbalanceadas (los empates son menos frecuentes).",
+      en: "In-play models significantly improve metrics by incorporating halftime data. F1-Score was prioritized over Accuracy since this is an imbalanced class problem (draws are less frequent)."
     },
 
     // === casas-predictor.html ===
@@ -427,33 +423,45 @@
       es: "Resultados Obtenidos",
       en: "Results Obtained"
     },
-    "casas.res.li1": {
-      es: "Regresi\u00f3n Lineal: MAPE de 39.9% \u2014 modelo base con limitaciones por la naturaleza categ\u00f3rica de los datos",
-      en: "Linear Regression: 39.9% MAPE \u2014 baseline model with limitations due to the categorical nature of the data"
+    "casas.res.th.modelo": {
+      es: "Modelo",
+      en: "Model"
     },
-    "casas.res.li2": {
-      es: "CatBoost: MAPE de 33.8% \u2014 mejora significativa gracias al manejo nativo de variables categ\u00f3ricas",
-      en: "CatBoost: 33.8% MAPE \u2014 significant improvement thanks to native handling of categorical variables"
+    "casas.res.th.obs": {
+      es: "Observaciones",
+      en: "Notes"
     },
-    "casas.res.li3": {
-      es: "CatBoost + Optuna: MAPE de 32.0% \u2014 optimizaci\u00f3n de hiperpar\u00e1metros con validaci\u00f3n cruzada (K-Fold, 5 splits)",
-      en: "CatBoost + Optuna: 32.0% MAPE \u2014 hyperparameter optimization with cross-validation (K-Fold, 5 splits)"
+    "casas.res.row1.modelo": {
+      es: "Regresi\u00f3n Lineal (OLS)",
+      en: "Linear Regression (OLS)"
     },
-    "casas.res.li4": {
-      es: "CatBoost + Optuna (Montevideo): MAPE de 25.0% \u2014 mejor resultado, equivalente a un error t\u00edpico de \u00b1 USD 50,000 sobre un precio promedio de USD 200,000",
-      en: "CatBoost + Optuna (Montevideo): 25.0% MAPE \u2014 best result, equivalent to a typical error of \u00b1 USD 50,000 on an average price of USD 200,000"
+    "casas.res.row1.obs": {
+      es: "Modelo base con limitaciones por la naturaleza categ\u00f3rica de los datos",
+      en: "Baseline model with limitations due to categorical data"
     },
-    "casas.res.li5": {
-      es: "CatBoost + Optuna (Maldonado): MAPE de 37.0%",
-      en: "CatBoost + Optuna (Maldonado): 37.0% MAPE"
+    "casas.res.row2.obs": {
+      es: "Mejora significativa gracias al manejo nativo de variables categ\u00f3ricas",
+      en: "Significant improvement thanks to native categorical variable handling"
     },
-    "casas.res.li6": {
-      es: "La segmentaci\u00f3n geogr\u00e1fica demostr\u00f3 que los modelos locales capturan mejor las din\u00e1micas de cada mercado",
-      en: "Geographic segmentation demonstrated that local models better capture each market's dynamics"
+    "casas.res.row3.obs": {
+      es: "Optimizaci\u00f3n de hiperpar\u00e1metros con K-Fold (5 splits)",
+      en: "Hyperparameter optimization with K-Fold (5 splits)"
     },
-    "casas.res.li7": {
-      es: "El modelo final constituye una herramienta confiable para estimar valores inmobiliarios en el mercado uruguayo",
-      en: "The final model constitutes a reliable tool for estimating real estate values in the Uruguayan market"
+    "casas.res.row4.obs": {
+      es: "Mejor resultado \u2014 error t\u00edpico de \u00b1 USD 50,000 sobre un precio promedio de USD 200,000",
+      en: "Best result \u2014 typical error of \u00b1 USD 50,000 on an average price of USD 200,000"
+    },
+    "casas.res.row5.obs": {
+      es: "Modelo segmentado por departamento",
+      en: "Department-segmented model"
+    },
+    "casas.res.row6.obs": {
+      es: "Modelo segmentado por departamento",
+      en: "Department-segmented model"
+    },
+    "casas.res.conclusion": {
+      es: "La segmentaci\u00f3n geogr\u00e1fica demostr\u00f3 que los modelos locales capturan mejor las din\u00e1micas de cada mercado. El modelo final constituye una herramienta confiable para estimar valores inmobiliarios en el mercado uruguayo.",
+      en: "Geographic segmentation demonstrated that local models better capture each market's dynamics. The final model constitutes a reliable tool for estimating real estate values in the Uruguayan market."
     },
 
     // === Shared tags that need translation ===
