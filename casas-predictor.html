@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="header-animate">
     <a class="back-link" href="index.html" data-i18n="back">&larr; Volver al Portafolio</a>
     <h1 data-i18n="casas.page.title">Predicci&oacute;n de Precios de Casas en Uruguay</h1>
     <p data-i18n="casas.subtitle">Modelo de Machine Learning para Estimar Valores Inmobiliarios</p>
@@ -136,5 +136,20 @@
   </footer>
 
   <script src="i18n.js"></script>
+  <script>
+    document.querySelectorAll('.detail-section').forEach(function(section, i) {
+      section.classList.add('reveal');
+      section.style.setProperty('--section-index', i);
+    });
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  </script>
 </body>
 </html>

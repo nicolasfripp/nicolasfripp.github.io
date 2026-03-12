@@ -182,7 +182,7 @@ section h2 {
   padding: 0;
   border-left: 4px solid var(--color-accent);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -196,9 +196,13 @@ section h2 {
   flex: 1;
 }
 
+.projects-grid:has(.project-card:hover) .project-card:not(:hover) {
+  opacity: 0.4;
+}
+
 .project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(56, 189, 248, 0.15), 0 6px 24px rgba(0, 0, 0, 0.35);
   border-left-color: var(--color-accent-dark);
 }
 
@@ -458,6 +462,31 @@ footer a:hover {
   color: var(--color-accent);
 }
 
+/* Page Entry Animation */
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-animate .back-link,
+.header-animate h1,
+.header-animate p,
+.header-animate .btn {
+  opacity: 0;
+  animation: fadeSlideDown 0.6s ease forwards;
+}
+
+.header-animate .back-link { animation-delay: 0.1s; }
+.header-animate h1 { animation-delay: 0.25s; }
+.header-animate p { animation-delay: 0.4s; }
+.header-animate .btn { animation-delay: 0.55s; }
+
 /* Scroll Reveal Animations */
 .reveal {
   opacity: 0;
@@ -472,6 +501,10 @@ footer a:hover {
 
 .project-card.reveal {
   transition-delay: calc(var(--card-index, 0) * 0.1s);
+}
+
+.detail-section.reveal {
+  transition-delay: calc(var(--section-index, 0) * 0.08s);
 }
 
 /* Focus States (Accessibility) */
