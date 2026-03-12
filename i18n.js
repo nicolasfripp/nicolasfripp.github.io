@@ -42,7 +42,7 @@
       en: "House Price Prediction in Uruguay"
     },
     "project.casas.desc": {
-      es: "Modelo predictivo para estimar el valor de casas en Uruguay a partir de +177,000 publicaciones de Mercado Libre y El Gallito, con limpieza exhaustiva de datos y modelos segmentados por departamento.",
+      es: "Modelo predictivo para estimar el valor de casas en Uruguay a partir de +177,000 publicaciones de Mercado Libre y El Gallito, con limpieza de datos y modelos segmentados por departamento.",
       en: "Predictive model to estimate house values in Uruguay from 177,000+ listings on Mercado Libre and El Gallito, with exhaustive data cleaning and models segmented by department."
     },
     "project.futbol.title": {
@@ -50,8 +50,8 @@
       en: "From Data to Goal"
     },
     "project.futbol.desc": {
-      es: "Sistema de machine learning para predecir resultados de partidos de La Liga espa\u00f1ola, utilizando modelos ensemble optimizados y 10 temporadas de datos hist\u00f3ricos.",
-      en: "Machine learning system to predict Spanish La Liga match outcomes, using optimized ensemble models and 10 seasons of historical data."
+      es: "Sistema de machine learning para predecir resultados de partidos de La Liga espa\u00f1ola, utilizando modelos de machine learning y 10 temporadas de datos hist\u00f3ricos.",
+      en: "Machine learning system to predict Spanish La Liga match outcomes, using machine learning models and 10 seasons of historical data."
     },
     "project.chatbot.title": {
       es: "Car Chatbot - B\u00fasqueda Sem\u00e1ntica de Veh\u00edculos",
