@@ -245,6 +245,74 @@
           </div>
         </div>
 
+        <div class="project-card reveal" style="--card-index:3" onclick="location.href='kmeans-detail.html'" role="link" tabindex="0">
+          <div class="project-card-image">
+            <svg viewBox="0 0 400 160" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="grad-kmeans" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#0f172a"/>
+                  <stop offset="100%" style="stop-color:#1a3a4f"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="160" fill="url(#grad-kmeans)"/>
+              <!-- Cluster 1 -->
+              <circle cx="120" cy="55" r="6" fill="rgba(56,189,248,0.25)" stroke="#38bdf8" stroke-width="1.5"/>
+              <circle cx="105" cy="45" r="4" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="135" cy="48" r="5" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="110" cy="65" r="4.5" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="130" cy="62" r="3.5" fill="rgba(56,189,248,0.2)" stroke="#38bdf8" stroke-width="1"/>
+              <circle cx="118" cy="40" r="3" fill="rgba(56,189,248,0.15)" stroke="#38bdf8" stroke-width="0.8"/>
+              <!-- Centroid 1 -->
+              <circle cx="120" cy="55" r="2" fill="#38bdf8"/>
+              <!-- Cluster 2 -->
+              <circle cx="240" cy="95" r="6" fill="rgba(14,165,233,0.25)" stroke="#0ea5e9" stroke-width="1.5"/>
+              <circle cx="225" cy="85" r="4" fill="rgba(14,165,233,0.2)" stroke="#0ea5e9" stroke-width="1"/>
+              <circle cx="255" cy="88" r="5" fill="rgba(14,165,233,0.2)" stroke="#0ea5e9" stroke-width="1"/>
+              <circle cx="230" cy="105" r="4.5" fill="rgba(14,165,233,0.2)" stroke="#0ea5e9" stroke-width="1"/>
+              <circle cx="250" cy="102" r="3.5" fill="rgba(14,165,233,0.2)" stroke="#0ea5e9" stroke-width="1"/>
+              <circle cx="260" cy="95" r="3" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="0.8"/>
+              <!-- Centroid 2 -->
+              <circle cx="240" cy="95" r="2" fill="#0ea5e9"/>
+              <!-- Cluster 3 -->
+              <circle cx="310" cy="50" r="5.5" fill="rgba(34,197,94,0.2)" stroke="rgba(34,197,94,0.6)" stroke-width="1.5"/>
+              <circle cx="295" cy="42" r="4" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1"/>
+              <circle cx="325" cy="45" r="4.5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1"/>
+              <circle cx="300" cy="58" r="3.5" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="1"/>
+              <circle cx="320" cy="56" r="3" fill="rgba(34,197,94,0.15)" stroke="rgba(34,197,94,0.5)" stroke-width="0.8"/>
+              <!-- Centroid 3 -->
+              <circle cx="310" cy="50" r="2" fill="rgba(34,197,94,0.8)"/>
+              <!-- Dashed cluster boundaries -->
+              <circle cx="120" cy="55" r="30" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+              <circle cx="240" cy="95" r="30" fill="none" stroke="#0ea5e9" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+              <circle cx="310" cy="50" r="25" fill="none" stroke="rgba(34,197,94,0.5)" stroke-width="0.8" stroke-dasharray="4,3" opacity="0.3"/>
+              <!-- Person icons -->
+              <g opacity="0.4">
+                <circle cx="70" cy="120" r="4" fill="none" stroke="#38bdf8" stroke-width="0.8"/>
+                <line x1="70" y1="124" x2="70" y2="135" stroke="#38bdf8" stroke-width="0.8"/>
+                <line x1="64" y1="129" x2="76" y2="129" stroke="#38bdf8" stroke-width="0.8"/>
+                <circle cx="340" cy="120" r="4" fill="none" stroke="#0ea5e9" stroke-width="0.8"/>
+                <line x1="340" y1="124" x2="340" y2="135" stroke="#0ea5e9" stroke-width="0.8"/>
+                <line x1="334" y1="129" x2="346" y2="129" stroke="#0ea5e9" stroke-width="0.8"/>
+              </g>
+              <!-- Label -->
+              <text x="200" y="148" font-family="Inter,sans-serif" font-size="8" fill="#38bdf8" opacity="0.3" text-anchor="middle" font-weight="500">CUSTOMER SEGMENTS</text>
+            </svg>
+          </div>
+          <div class="project-card-content">
+            <h3 data-i18n="project.kmeans.title">Customer Personality Analysis - Segmentación con K-Means</h3>
+            <p data-i18n="project.kmeans.desc">Segmentación de clientes mediante K-Means clustering para identificar perfiles de consumo, demografía y comportamiento de compra, optimizando estrategias de marketing personalizadas.</p>
+            <div class="tags">
+              <span class="tag">K-Means</span>
+              <span class="tag">scikit-learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Matplotlib</span>
+              <span class="tag">Seaborn</span>
+              <span class="tag">Python</span>
+            </div>
+            <a class="btn" href="kmeans-detail.html" data-i18n="btn.ver">Ver Proyecto &rarr;</a>
+          </div>
+        </div>
+
       </div>
     </section>
 

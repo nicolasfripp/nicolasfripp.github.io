@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customer Personality Analysis - Nicolás Fripp Rodríguez</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <header class="header-animate">
+    <a class="back-link" href="index.html" data-i18n="back">&larr; Volver al Portafolio</a>
+    <h1 data-i18n="kmeans.page.title">Customer Personality Analysis</h1>
+    <p data-i18n="kmeans.subtitle">Segmentaci&oacute;n de Clientes mediante K-Means Clustering</p>
+    <a class="btn repo-btn" href="https://github.com/nicolasfripp/nicolasfripp.github.io/blob/master/kmeans.html" target="_blank" rel="noopener noreferrer" data-i18n="btn.codigo">Ver c&oacute;digo ↗</a>
+  </header>
+
+  <main>
+
+    <section class="detail-section">
+      <h2 data-i18n="kmeans.obj.title">Objetivo del Proyecto</h2>
+      <p data-i18n="kmeans.obj.text">Identificar segmentos diferenciados de clientes a partir de datos demogr&aacute;ficos, de personalidad y de comportamiento de compra, aplicando t&eacute;cnicas de clustering no supervisado. El objetivo es generar insights accionables que permitan dise&ntilde;ar campa&ntilde;as de marketing personalizadas, mejorar la retenci&oacute;n de clientes de alto valor y optimizar la asignaci&oacute;n de recursos.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2 data-i18n="kmeans.prob.title">Problema Abordado</h2>
+      <p data-i18n="kmeans.prob.text">Una empresa retail con una base de clientes en crecimiento necesitaba pasar de estrategias de marketing gen&eacute;ricas a enfoques personalizados. Sin una segmentaci&oacute;n clara, las campa&ntilde;as ten&iacute;an baja conversi&oacute;n y no se pod&iacute;an identificar los grupos de clientes m&aacute;s valiosos. El dataset contiene informaci&oacute;n de m&aacute;s de 2,000 clientes con 29 atributos que incluyen demograf&iacute;a, gastos en 6 categor&iacute;as de productos, respuesta a 5 campa&ntilde;as de marketing y canales de compra.</p>
+    </section>
+
+    <section class="detail-section">
+      <h2 data-i18n="kmeans.tech.title">Decisiones T&eacute;cnicas</h2>
+      <ul>
+        <li data-i18n="kmeans.tech.li1">Estandarizaci&oacute;n de variables con StandardScaler previo al clustering para evitar sesgos por diferencias de escala</li>
+        <li data-i18n="kmeans.tech.li2">Selecci&oacute;n del n&uacute;mero de clusters mediante Elbow Plot (WCSS) y Silhouette Score, convergiendo ambos m&eacute;todos en k=3</li>
+        <li data-i18n="kmeans.tech.li3">An&aacute;lisis exploratorio exhaustivo con visualizaciones univariadas y bivariadas, incluyendo matrices de correlaci&oacute;n para identificar relaciones entre variables</li>
+        <li data-i18n="kmeans.tech.li4">Limpieza de datos: eliminaci&oacute;n de 24 filas con valores nulos en Income (~1%) y 186 registros duplicados</li>
+        <li data-i18n="kmeans.tech.li5">Profiling de clusters mediante boxplots y bar plots comparativos para caracterizar cada segmento</li>
+      </ul>
+    </section>
+
+    <section class="detail-section">
+      <h2 data-i18n="kmeans.tecno.title">Tecnolog&iacute;as y Metodolog&iacute;as</h2>
+
+      <h3>Machine Learning</h3>
+      <div class="tags">
+        <span class="tag">K-Means</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">Yellowbrick</span>
+      </div>
+
+      <h3 data-i18n="kmeans.procesamiento">Procesamiento de Datos</h3>
+      <div class="tags">
+        <span class="tag">Pandas</span>
+        <span class="tag">NumPy</span>
+        <span class="tag">StandardScaler</span>
+      </div>
+
+      <h3 data-i18n="kmeans.visualizacion">Visualizaci&oacute;n</h3>
+      <div class="tags">
+        <span class="tag">Matplotlib</span>
+        <span class="tag">Seaborn</span>
+      </div>
+
+      <h3 data-i18n="kmeans.datos.title">Datos</h3>
+      <p data-i18n="kmeans.datos.text">Dataset de +2,000 clientes con 29 atributos: demograf&iacute;a (a&ntilde;o de nacimiento, educaci&oacute;n, estado civil, ingresos, hijos), gasto en 6 categor&iacute;as (vinos, frutas, carnes, pescados, dulces, productos gold), respuesta a 5 campa&ntilde;as de marketing y comportamiento de compra por canal (web, cat&aacute;logo, tienda).</p>
+    </section>
+
+    <section class="detail-section">
+      <h2 data-i18n="kmeans.pipeline.title">Pipeline de An&aacute;lisis</h2>
+      <ol>
+        <li data-i18n="kmeans.pipeline.li1">Carga y exploraci&oacute;n inicial del dataset (tipos de datos, valores nulos, duplicados)</li>
+        <li data-i18n="kmeans.pipeline.li2">Limpieza: eliminaci&oacute;n de 24 filas con Income nulo y 186 duplicados</li>
+        <li data-i18n="kmeans.pipeline.li3">An&aacute;lisis exploratorio: distribuciones, boxplots, matriz de correlaci&oacute;n</li>
+        <li data-i18n="kmeans.pipeline.li4">Estandarizaci&oacute;n de variables num&eacute;ricas con StandardScaler</li>
+        <li data-i18n="kmeans.pipeline.li5">Selecci&oacute;n de k &oacute;ptimo: Elbow Plot y Silhouette Score &rarr; k=3</li>
+        <li data-i18n="kmeans.pipeline.li6">Entrenamiento final de K-Means con 3 clusters (max_iter=1000)</li>
+        <li data-i18n="kmeans.pipeline.li7">Profiling de clusters: boxplots y bar plots comparativos por variable</li>
+        <li data-i18n="kmeans.pipeline.li8">Generaci&oacute;n de recomendaciones de negocio por segmento</li>
+      </ol>
+    </section>
+
+    <section class="detail-section">
+      <h2 data-i18n="kmeans.res.title">Resultados Obtenidos</h2>
+      <p data-i18n="kmeans.res.intro">Se identificaron 3 segmentos diferenciados de clientes:</p>
+      <table class="results-table">
+        <thead>
+          <tr>
+            <th data-i18n="kmeans.res.th.cluster">Segmento</th>
+            <th data-i18n="kmeans.res.th.size">Tama&ntilde;o</th>
+            <th data-i18n="kmeans.res.th.perfil">Perfil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="best-row">
+            <td data-i18n="kmeans.res.row1.cluster">Cluster 0 &mdash; Ingresos Altos</td>
+            <td>533</td>
+            <td data-i18n="kmeans.res.row1.perfil">Mayor gasto en todas las categor&iacute;as, especialmente carnes y vinos. Mayor tasa de respuesta a campa&ntilde;as (~30%). Compran por cat&aacute;logo. Pocos hijos en el hogar. Clientes m&aacute;s leales.</td>
+          </tr>
+          <tr>
+            <td data-i18n="kmeans.res.row2.cluster">Cluster 1 &mdash; Ingresos Bajos</td>
+            <td>919</td>
+            <td data-i18n="kmeans.res.row2.perfil">Gasto m&iacute;nimo en productos. Visitan mucho la web pero compran poco (comparan precios). Mayor presencia de hijos. Baja respuesta a campa&ntilde;as. Buscadores de precio.</td>
+          </tr>
+          <tr>
+            <td data-i18n="kmeans.res.row3.cluster">Cluster 2 &mdash; Ingresos Medios</td>
+            <td>575</td>
+            <td data-i18n="kmeans.res.row3.perfil">Gasto intermedio. Compran m&aacute;s productos con descuento. Alto gasto en productos gold. Mayor presencia de adolescentes en el hogar. Sensibles a promociones.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="detail-section">
+      <h2 data-i18n="kmeans.rec.title">Recomendaciones de Negocio</h2>
+      <ul>
+        <li data-i18n="kmeans.rec.li1"><strong data-i18n="kmeans.rec.li1.strong">Ingresos Altos:</strong> Campa&ntilde;as basadas en cat&aacute;logos con foco en calidad premium, especialmente carnes y vinos. No requieren descuentos. Crear secciones premium exclusivas.</li>
+        <li data-i18n="kmeans.rec.li2"><strong data-i18n="kmeans.rec.li2.strong">Ingresos Bajos:</strong> Campa&ntilde;as web con foco en precios bajos. Promociones masivas en la web segmentadas por este grupo. Incluir ofertas en productos para ni&ntilde;os dado que tienen la mayor cantidad de hijos.</li>
+        <li data-i18n="kmeans.rec.li3"><strong data-i18n="kmeans.rec.li3.strong">Ingresos Medios:</strong> Descuentos en productos gold y promociones para adolescentes. Aprovechar su alta sensibilidad a descuentos para incrementar volumen de compra.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Nicolás Fripp Rodríguez &mdash; 2026</p>
+  </footer>
+
+  <script src="i18n.js"></script>
+  <script>
+    document.querySelectorAll('.detail-section').forEach(function(section, i) {
+      section.classList.add('reveal');
+      section.style.setProperty('--section-index', i);
+    });
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  </script>
+</body>
+</html>
