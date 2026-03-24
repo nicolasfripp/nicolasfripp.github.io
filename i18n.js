@@ -17,10 +17,6 @@
       es: "Soy Nicol\u00e1s Fripp Rodr\u00edguez, Ingeniero en Computaci\u00f3n egresado de la Universidad de la Rep\u00fablica (UDELAR). Adem\u00e1s, soy egresado de la Especializaci\u00f3n en Ciencia de Datos e Inteligencia Artificial dictada por la Universidad Tecnol\u00f3gica del Uruguay (UTEC), en colaboraci\u00f3n con el Massachusetts Institute of Technology (MIT).",
       en: "I am Nicol\u00e1s Fripp Rodr\u00edguez, a Computer Engineer graduated from Universidad de la Rep\u00fablica (UDELAR). I also hold a Specialization in Data Science and Artificial Intelligence from Universidad Tecnol\u00f3gica del Uruguay (UTEC), in collaboration with the Massachusetts Institute of Technology (MIT)."
     },
-    "about.bio2": {
-      es: "Mi formaci\u00f3n se centr\u00f3 en el desarrollo y la aplicaci\u00f3n de t\u00e9cnicas avanzadas de an\u00e1lisis de datos, aprendizaje autom\u00e1tico e inteligencia artificial, con un enfoque fuertemente pr\u00e1ctico y orientado a la resoluci\u00f3n de problemas reales en distintos dominios.",
-      en: "My training focused on the development and application of advanced techniques in data analysis, machine learning, and artificial intelligence, with a strongly practical approach oriented toward solving real-world problems across various domains."
-    },
     "about.bio3": {
       es: "Este sitio web, vinculado a mi repositorio en GitHub, tiene como objetivo difundir y poner a disposici\u00f3n los principales proyectos que desarroll\u00e9 durante la especializaci\u00f3n, los cuales representan los aprendizajes, competencias y desaf\u00edos m\u00e1s significativos de mi recorrido acad\u00e9mico.",
       en: "This website, linked to my GitHub repository, aims to share and make available the main projects I developed during the specialization, which represent the most significant learnings, competencies, and challenges of my academic journey."
@@ -64,6 +60,18 @@
     "btn.codigo": {
       es: "Ver c\u00f3digo \u2197",
       en: "View code \u2197"
+    },
+    "personal.title": {
+      es: "Proyectos Personales Privados",
+      en: "Private Personal Projects"
+    },
+    "project.torneria.title": {
+      es: "Sistema de Gesti\u00f3n de Fiados - Torner\u00eda",
+      en: "Credit Management System - Machine Shop"
+    },
+    "project.torneria.desc": {
+      es: "Sistema web para la gesti\u00f3n de fiados de una torner\u00eda, permitiendo registrar clientes, productos y cuentas corrientes con seguimiento de saldos y pagos.",
+      en: "Web system for managing credit accounts at a machine shop, enabling customer, product, and current account registration with balance and payment tracking."
     },
     "thesis.title": {
       es: "Tesis de Grado - Ingenier\u00eda en Computaci\u00f3n",
