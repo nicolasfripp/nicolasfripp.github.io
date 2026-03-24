@@ -9,10 +9,6 @@
       es: "Especialista en Ciencia de Datos e Inteligencia Artificial (UTEC | MIT)",
       en: "Specialist in Data Science and Artificial Intelligence (UTEC | MIT)"
     },
-    "header.cvuy-note": {
-      es: "(pr\u00f3ximamente)",
-      en: "(coming soon)"
-    },
     "about.title": {
       es: "Sobre M\u00ed",
       en: "About Me"
