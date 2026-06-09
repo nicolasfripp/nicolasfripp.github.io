@@ -61,6 +61,18 @@
       es: "Ver c\u00f3digo \u2197",
       en: "View code \u2197"
     },
+    "public.title": {
+      es: "Proyectos Personales Públicos",
+      en: "Public Personal Projects"
+    },
+    "project.nacional.title": {
+      es: "Sitio Web - Club Nacional de Football de Nueva Helvecia",
+      en: "Website - Club Nacional de Football de Nueva Helvecia"
+    },
+    "project.nacional.desc": {
+      es: "Sitio web institucional para el Club Nacional de Football de Nueva Helvecia, con secciones de próximo partido, partidos, novedades, plantel principal e historia, además de un formulario de adhesión de socios (#HaceteSocio).",
+      en: "Institutional website for Club Nacional de Football de Nueva Helvecia, featuring next match, fixtures, news, main squad, and history sections, plus a membership sign-up form (#HaceteSocio)."
+    },
     "personal.title": {
       es: "Proyectos Personales Privados",
       en: "Private Personal Projects"
