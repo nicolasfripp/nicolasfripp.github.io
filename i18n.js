@@ -65,6 +65,10 @@
       es: "Proyectos Personales Públicos",
       en: "Public Personal Projects"
     },
+    "btn.sitio": {
+      es: "Ver sitio ↗",
+      en: "Visit site ↗"
+    },
     "project.nacional.title": {
       es: "Sitio Web - Club Nacional de Football de Nueva Helvecia",
       en: "Website - Club Nacional de Football de Nueva Helvecia"
