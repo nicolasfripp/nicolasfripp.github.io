@@ -70,8 +70,8 @@
       en: "Website - Club Nacional de Football de Nueva Helvecia"
     },
     "project.nacional.desc": {
-      es: "Sitio web institucional para el Club Nacional de Football de Nueva Helvecia, con secciones de próximo partido, partidos, novedades, plantel principal e historia, además de un formulario de adhesión de socios (#HaceteSocio).",
-      en: "Institutional website for Club Nacional de Football de Nueva Helvecia, featuring next match, fixtures, news, main squad, and history sections, plus a membership sign-up form (#HaceteSocio)."
+      es: "Sitio web full-stack para el Club Nacional de Football de Nueva Helvecia: tienda online y gestión de socios con pagos vía MercadoPago, secciones de partidos, novedades, plantel e historia, y un panel de administración con control de acceso por roles.",
+      en: "Full-stack website for Club Nacional de Football de Nueva Helvecia: online store and membership management with MercadoPago payments, fixtures, news, squad and history sections, plus a role-based admin dashboard."
     },
     "personal.title": {
       es: "Proyectos Personales Privados",
